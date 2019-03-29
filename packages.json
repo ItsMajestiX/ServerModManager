@@ -1,0 +1,12 @@
+{
+  "packages": [
+    {
+      "name": "dclassmadness",
+      "version": "0.0.1",
+      "dependencies": [],
+      "downloadLink": "https://github.com/VirtualBrightPlayz/Smod2-Mod1_DCLASS_MADNESS/releases/download/v0.0.1/Mod1.dll",
+      "filename": "Mod1.dll",
+      "isDependency": true
+    }
+  ]
+}

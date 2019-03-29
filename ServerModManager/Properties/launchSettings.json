@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ServerModManager": {
+      "commandName": "Project",
+      "commandLineArgs": "remove dclassmadness"
+    }
+  }
+}
