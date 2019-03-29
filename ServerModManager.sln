@@ -5,10 +5,10 @@ VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerModManager", "ServerModManager\ServerModManager.csproj", "{D5DEC437-33A5-4016-9E5D-3082B3E4E078}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FileHostTest", "FileHostTest", "{452BAC99-1651-4CC7-8CA9-7035778734C1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{44004A64-6E3A-4733-92AB-1B69553CEF7A}"
 	ProjectSection(SolutionItems) = preProject
-		packages.json = packages.json
-		server.bat = server.bat
+		DebugServer\packages.json = DebugServer\packages.json
+		DebugServer\server.bat = DebugServer\server.bat
 	EndProjectSection
 EndProject
 Global
