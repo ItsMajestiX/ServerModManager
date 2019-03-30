@@ -12,13 +12,15 @@
 <p>Uses .NET Core, so it can be run on Windows and Linux (and maybe even OS X…)</p>
 <h1 id="install">Install</h1>
 <p>Create a new folder at the same level as sm_plugins and unzip the files there. Now you’re good to go!</p>
+<h1 id="packages">Packages</h1>
+<p>See <a href="https://github.com/ItsMajestiX/ServerModManager/blob/master/packages.md">here</a> for a list of currently available packages</p>
 <h1 id="note-on-json">Note on JSON</h1>
 <p>The JSON format will change a lot, so it’s a good idea to get every new release. I’ll freeze the format in v1.0, but untill then, things are subject to change without warning.</p>
 <h1 id="to-do">To Do</h1>
 <ul>
 <li>Framework Dependant Executable to remove the need for all those pesky extra DLLs (most likely coming with .NET Core 3.0 and VS 2019, so hopefully soon)</li>
 <li>Don’t dump stack trace</li>
-<li>Update  command</li>
+<li>Update command</li>
 <li>Futureproof JSON</li>
 </ul>
 <h1 id="for-modders">For Modders</h1>
