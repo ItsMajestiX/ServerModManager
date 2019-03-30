@@ -13,7 +13,7 @@ namespace ServerModManager
         public bool isDependency;
 
         //Testing constructor
-        public Package(string name, string version, List<string> dependencie1, string downloadLink, string filename, bool isDependency)
+        public Package(string name, string version, List<string> dependencies, string downloadLink, string filename, bool isDependency)
         {
             this.name = name;
             this.version = version;
