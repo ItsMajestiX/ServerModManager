@@ -13,19 +13,21 @@ namespace ServerModManager
             if (validator.success)
             {
                 PackageOverview overview = new PackageOverview();
-                overview.GenPackages();
-                //What command are we running?
-                switch (validator.opType)
+                if (overview.GenPackages())
                 {
-                    case 0:
-                        Installer installer = new Installer(validator, overview);
-                        break;
-                    case 1:
-                        Remover remover = new Remover(validator, overview);
-                        break;
-                    default:
-                        Console.WriteLine("Unknown error");
-                        break;
+                    //What command are we running?
+                    switch (validator.opType)
+                    {
+                        case 0:
+                            Installer installer = new Installer(validator, overview);
+                            break;
+                        case 1:
+                            Remover remover = new Remover(validator, overview);
+                            break;
+                        default:
+                            Console.WriteLine("Unknown error");
+                            break;
+                    }
                 }
             }
             #if (DEBUG)
