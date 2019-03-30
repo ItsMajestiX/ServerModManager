@@ -20,7 +20,7 @@
 <ul>
 <li>Framework Dependant Executable to remove the need for all those pesky extra DLLs (most likely coming with .NET Core 3.0 and VS 2019, so hopefully soon)</li>
 <li>Don’t dump stack trace</li>
-<li>Update  command</li>
+<li>Update command</li>
 <li>Futureproof JSON</li>
 </ul>
 <h1 id="for-modders">For Modders</h1>
