@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -15,7 +14,11 @@ namespace ServerModManager
         {
             using (HttpClient client = new HttpClient())
             {
-                var json = client.GetStringAsync("http://127.0.0.1:8000/packages.json");
+                #if (DEBUG)
+                    var json = client.GetStringAsync("http://127.0.0.1:8000/packages.json");
+                #else
+                    var json = client.GetStringAsync("https://raw.githubusercontent.com/ItsMajestiX/ServerModManager/master/packages.json");
+                #endif
                 string data = await json;
                 packages = JsonConvert.DeserializeObject<PackageOverview>(data).packages;
             }
