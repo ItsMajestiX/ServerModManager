@@ -5,6 +5,7 @@
 
 <h1 id="servermodmanager">ServerModManager</h1>
 <p>A package manager for SCP: Secret Laboratory</p>
+<p><em>So apparently the official SMod team is working on something similar to this. When it releases, I’ll archive this and switch over to the official version. Until then, the project isn’t going anywhere.</em></p>
 <p>SeverModManager is designed to make installing <a href="https://github.com/Grover-c13/Smod2">SMod2</a> packages easier. It’s modeled after pip, so if you have worked with that, you’re good to go.</p>
 <p>Install by simply running <code>scpman install packagename</code>, and remove with <code>scpman remove packagename</code>. Simple!</p>
 <p>Dependencies are automatically taken care of, so you don’t have to install everything one at a time.</p>
