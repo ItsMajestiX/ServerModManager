@@ -10,20 +10,23 @@ namespace ServerModManager
             //Validate arguments passed to program
             Validator validator = new Validator(args);
             //Get the available packages
-            PackageOverview overview = new PackageOverview();
-            overview.GenPackages();
-            //What command are we running?
-            switch (validator.opType)
+            if (validator.success)
             {
-                case 0:
-                    Installer installer = new Installer(validator, overview);
-                    break;
-                case 1:
-                    Remover remover = new Remover(validator, overview);
-                    break;
-                default:
-                    Console.WriteLine("Unknown error");
-                    break;
+                PackageOverview overview = new PackageOverview();
+                overview.GenPackages();
+                //What command are we running?
+                switch (validator.opType)
+                {
+                    case 0:
+                        Installer installer = new Installer(validator, overview);
+                        break;
+                    case 1:
+                        Remover remover = new Remover(validator, overview);
+                        break;
+                    default:
+                        Console.WriteLine("Unknown error");
+                        break;
+                }
             }
             #if (DEBUG)
                 Console.ReadKey();

@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -10,17 +11,35 @@ namespace ServerModManager
         public List<Package> packages;
 
         //Download from server
-        private async Task GetPackages()
+        private async Task<bool> GetPackages()
         {
             using (HttpClient client = new HttpClient())
             {
-                #if (DEBUG)
-                    var json = client.GetStringAsync("http://127.0.0.1:8000/packages.json");
-                #else
-                    var json = client.GetStringAsync("https://raw.githubusercontent.com/ItsMajestiX/ServerModManager/master/packages.json");
-                #endif
+                Task<string> json;
+                try
+                {
+                    #if (DEBUG)
+                        json = client.GetStringAsync("http://127.0.0.1:8000/packages.json");
+                    #else
+                        json = client.GetStringAsync("https://raw.githubusercontent.com/ItsMajestiX/ServerModManager/master/packages.json");
+                    #endif
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Error getting the packages from the server. Check your internet connection.");
+                    return false;
+                }
                 string data = await json;
-                packages = JsonConvert.DeserializeObject<PackageOverview>(data).packages;
+                try
+                {
+                    packages = JsonConvert.DeserializeObject<PackageOverview>(data).packages;
+                    return true;
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("ERROR: JSON Serialization Failed. You most likely need to update the program at https://github.com/ItsMajestiX/ServerModManager/releases");
+                    return false;
+                }
             }
         }
 
@@ -38,9 +57,9 @@ namespace ServerModManager
         }
 
         //So the main method doesn't have to use async
-        public void GenPackages()
+        public bool GenPackages()
         {
-            GetPackages().Wait();
+            return GetPackages().Result;
         }
 
         //Testing constructor
