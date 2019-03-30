@@ -26,11 +26,11 @@ namespace ServerModManager
                 //Download file to appropriate directory
                 if (package.isDependency)
                 {
-                    await client.DownloadFileTaskAsync(package.downloadLink, "sm_plugins/dependencies/" + package.filename);
+                    await client.DownloadFileTaskAsync(package.downloadLink, "../sm_plugins/dependencies/" + package.filename);
                 }
                 else
                 {
-                    await client.DownloadFileTaskAsync(package.downloadLink, "sm_plugins/" + package.filename);
+                    await client.DownloadFileTaskAsync(package.downloadLink, "../sm_plugins/" + package.filename);
                 }
             }
         }
