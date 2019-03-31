@@ -7,23 +7,39 @@ namespace ServerModManager
     class Installer
     {
         //The main piece
-        static async Task getFile(Package package, PackageOverview overview)
+        static async Task GetFile(Package package, PackageOverview overview, Validator val)
         {
             //Download dependencies first
             foreach (string i in package.dependencies)
             {
-                await getFile(overview.GetPackageWithName(i), overview);
+                await GetFile(overview.GetPackageWithName(i), overview, val);
             }
             using (WebClient client = new WebClient())
             {
+                LoadingBar progress = new LoadingBar();
+                client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(progress.DownloadProgressCallback);
                 //Download file to appropriate directory
-                if (package.isDependency)
+                if (!package.isDependency)
                 {
-                    await client.DownloadFileTaskAsync(package.downloadLink, "../sm_plugins/dependencies/" + package.filename);
+                    if (val.pluginsExist)
+                    {
+                        await client.DownloadFileTaskAsync(package.downloadLink, "../sm_plugins/" + package.filename);
+                    }
+                    else
+                    {
+                        Console.WriteLine("ERROR: sm_plugins could not be found. Did you unzip all the app files into a folder at the same level as sm_plugins?");
+                    }
                 }
                 else
                 {
-                    await client.DownloadFileTaskAsync(package.downloadLink, "../sm_plugins/" + package.filename);
+                    if (val.pluginsExist && val.dependenciesExist)
+                    {
+                        await client.DownloadFileTaskAsync(package.downloadLink, "../sm_plugins/dependencies/" + package.filename);
+                    }
+                    else
+                    {
+                        Console.WriteLine("ERROR: sm_plugins and/or dependencies could not be found. Did you unzip all the app files into a folder at the same level as sm_plugins?");
+                    }
                 }
             }
         }
@@ -32,14 +48,14 @@ namespace ServerModManager
         {
             //Makes it look nice
             Package info = overview.GetPackageWithName(val.packageName);
-            if (info == null)
+            if (info != null)
             {
-                Console.WriteLine("ERROR: no package with name " + val.packageName);
+                Console.WriteLine("Downloading " + val.packageName);
+                GetFile(info, overview, val).Wait();
             }
             else
             {
-                Console.WriteLine("Downloading " + val.packageName);
-                getFile(info, overview).Wait();
+                Console.WriteLine("ERROR: No package with name " + val.packageName);
             }
         }
 

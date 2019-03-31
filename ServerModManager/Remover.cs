@@ -15,11 +15,17 @@ namespace ServerModManager
                 Console.WriteLine("Removing package " + val.packageName);
                 if (!package.isDependency)
                 {
-                    File.Delete("../sm_plugins/" + package.filename);
+                    if (val.pluginsExist)
+                    {
+                        File.Delete("../sm_plugins/" + package.filename);
+                    }
                 }
                 else
                 {
-                    File.Delete("../sm_plugins/dependencies/" + package.filename);
+                    if (val.pluginsExist && val.dependenciesExist)
+                    {
+                        File.Delete("../sm_plugins/dependencies/" + package.filename);
+                    }
                 }
             }
             else

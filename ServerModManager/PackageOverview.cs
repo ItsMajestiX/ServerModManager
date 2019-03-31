@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -13,13 +14,15 @@ namespace ServerModManager
         //Download from server
         private async Task<bool> GetPackages()
         {
-            using (HttpClient client = new HttpClient())
+            using (WebClient client = new WebClient())
             {
+                LoadingBar progress = new LoadingBar();
+                client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(progress.DownloadProgressCallback);
                 Task<string> json;
                 #if (DEBUG)
-                    json = client.GetStringAsync("http://127.0.0.1:8000/packages.json");
+                    json = client.DownloadStringTaskAsync("http://127.0.0.1:8000/packages.json");
                 #else
-                    json = client.GetStringAsync("https://raw.githubusercontent.com/ItsMajestiX/ServerModManager/master/packages.json");
+                    json = DownloadStringTaskAsync("https://raw.githubusercontent.com/ItsMajestiX/ServerModManager/master/packages.json");
                 #endif
                 string data = await json;
                 packages = JsonConvert.DeserializeObject<PackageOverview>(data).packages;

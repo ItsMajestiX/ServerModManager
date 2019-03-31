@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace ServerModManager
 {
@@ -14,12 +15,24 @@ namespace ServerModManager
 
         //Define values that can be set by command
         public bool success = false;
-        public OP_TYPE opType;
+        public OP_TYPE opType = OP_TYPE.INVALID;
 
-        public string packageName;
+        //Ensure plugin folders are found
+        public bool pluginsExist = false;
+        public bool dependenciesExist = false;
+
+        public string packageName = null;
 
         public Validator(string[] args)
         {
+            if (Directory.Exists("../sm_plugins"))
+            {
+                pluginsExist = true;
+                if (Directory.Exists("../sm_plugins/dependencies"))
+                {
+                    dependenciesExist = true;
+                }
+            }
             //Check length of arguments
             int len = args.GetLength(0);
             if (len < 1)
