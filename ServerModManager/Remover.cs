@@ -7,8 +7,7 @@ namespace ServerModManager
 {
     class Remover
     {
-        //Could probably be static. Next update maybe
-        public Remover(Validator val, PackageOverview overview)
+        internal static void remove(Validator val, PackageOverview overview)
         {
             Package package = overview.GetPackageWithName(val.packageName);
             if (package != null)

@@ -1,25 +1,18 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace ServerModManager
 {
     class Installer
     {
-        //Exit code
-        public int exit;
-
-        private PackageOverview overview;
-
         //The main piece
-        private async Task GetFile(Package package)
+        static async Task getFile(Package package, PackageOverview overview)
         {
             //Download dependencies first
             foreach (string i in package.dependencies)
             {
-                await GetFile(overview.GetPackageWithName(i));
+                await getFile(overview.GetPackageWithName(i), overview);
             }
             using (WebClient client = new WebClient())
             {
@@ -35,10 +28,9 @@ namespace ServerModManager
             }
         }
 
-        public Installer(Validator val, PackageOverview overview)
+        internal static void install(Validator val, PackageOverview overview)
         {
             //Makes it look nice
-            this.overview = overview;
             Package info = overview.GetPackageWithName(val.packageName);
             if (info == null)
             {
@@ -47,8 +39,10 @@ namespace ServerModManager
             else
             {
                 Console.WriteLine("Downloading " + val.packageName);
-                GetFile(info).Wait();
+                getFile(info, overview).Wait();
             }
         }
+
+        public Installer() { }
     }
 }

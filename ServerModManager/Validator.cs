@@ -4,8 +4,18 @@ namespace ServerModManager
 {
     class Validator
     {
-        public bool success = true;
-        public int opType;
+        //Make enum for easier time reading code
+        public enum OP_TYPE
+        {
+            INVALID = -1,
+            INSTALL = 0,
+            REMOVE = 1
+        }
+
+        //Define values that can be set by command
+        public bool success = false;
+        public OP_TYPE opType;
+
         public string packageName;
 
         public Validator(string[] args)
@@ -15,7 +25,6 @@ namespace ServerModManager
             if (len < 1)
             {
                 Console.WriteLine("ERROR: Usage scpman command");
-                success = false;
             }
             else
             {
@@ -28,14 +37,15 @@ namespace ServerModManager
                         if (len < 2)
                         {
                             Console.WriteLine("ERROR: Usage scpman install packagename");
-                            success = false;
+                            opType = OP_TYPE.INVALID;
                             break;
                         }
                         else
                         {
                             //fill out details
-                            opType = 0;
+                            opType = OP_TYPE.INSTALL;
                             packageName = args[1];
+                            success = true;
                             break;
                         }
                     case "remove":
@@ -43,20 +53,21 @@ namespace ServerModManager
                         if (len < 2)
                         {
                             Console.WriteLine("ERROR: Usage scpman remove packagename");
-                            success = false;
+                            opType = OP_TYPE.INVALID;
                             break;
                         }
                         else
                         {
                             //fill out details
-                            opType = 1;
+                            opType = OP_TYPE.REMOVE;
                             packageName = args[1];
+                            success = true;
                             break;
                         }
                     //invalid command
                     default:
                         Console.WriteLine("ERROR: Invalid command.");
-                        success = false;
+                        opType = OP_TYPE.INVALID;
                         break;
                 }
             }
