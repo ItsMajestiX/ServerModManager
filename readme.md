@@ -16,6 +16,8 @@
 <p>See <a href="https://github.com/ItsMajestiX/ServerModManager/blob/master/packages.md">here</a> for a list of currently available packages</p>
 <h1 id="note-on-json">Note on JSON</h1>
 <p>The JSON format will change a lot, so it’s a good idea to get every new release. I’ll freeze the format in v1.0, but untill then, things are subject to change without warning.</p>
+<h1 id="about-testing-server">About Testing Server</h1>
+<p>The directory TestingServer is a directory you can use to debug the program without needing to download from the repository. Just install Python 3 and run server.bat.</p>
 <h1 id="to-do">To Do</h1>
 <ul>
 <li>Framework Dependant Executable to remove the need for all those pesky extra DLLs (most likely coming with .NET Core 3.0 and VS 2019, so hopefully soon)</li>
