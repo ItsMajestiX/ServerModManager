@@ -23,7 +23,7 @@ namespace ServerModManager
                 #if (DEBUG)
                     json = client.DownloadStringTaskAsync("http://127.0.0.1:8000/packages.json");
                 #else
-                    json = DownloadStringTaskAsync("https://raw.githubusercontent.com/ItsMajestiX/ServerModManager/master/packages.json");
+                    json = client.DownloadStringTaskAsync("https://raw.githubusercontent.com/ItsMajestiX/ServerModManager/master/packages.json");
                 #endif
                 //Serialize to object
                 string data = await json;
