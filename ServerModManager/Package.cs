@@ -6,6 +6,7 @@ namespace ServerModManager
     {
         //Properties will be carried over to json
         public string name;
+        public string author;
         public string version;
         public List<string> dependencies;
         public string downloadLink;
@@ -13,9 +14,10 @@ namespace ServerModManager
         public bool isDependency;
 
         //Testing constructor
-        public Package(string name, string version, List<string> dependencies, string downloadLink, string filename, bool isDependency)
+        public Package(string name, string author, string version, List<string> dependencies, string downloadLink, string filename, bool isDependency)
         {
             this.name = name;
+            this.author = author;
             this.version = version;
             this.dependencies = dependencies;
             this.downloadLink = downloadLink;

@@ -2,6 +2,7 @@
   "packages": [
     {
       "name": "914customrecipes",
+      "author":  "storm37000",
       "version": "1.0.5",
       "dependencies": [],
       "downloadLink": "https://github.com/storm37000/SCPSL_Smod_914_custom_recipes/releases/download/1.0.5/custom914recip.dll",
