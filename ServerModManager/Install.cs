@@ -16,9 +16,10 @@ namespace ServerModManager
             }
             using (WebClient client = new WebClient())
             {
+                //Setup loading bar
                 LoadingBar progress = new LoadingBar();
                 client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(progress.DownloadProgressCallback);
-                //Download file to appropriate directory
+                //Download file to appropriate directory after checking if the folders exist
                 if (!package.isDependency)
                 {
                     if (val.pluginsExist)

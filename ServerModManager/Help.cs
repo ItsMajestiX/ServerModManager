@@ -6,6 +6,7 @@ namespace ServerModManager
 {
     class Help
     {
+        //Show help statements
         public static void MainHelp()
         {
             Console.WriteLine("USAGE:\n" +

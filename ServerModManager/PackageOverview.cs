@@ -16,14 +16,16 @@ namespace ServerModManager
         {
             using (WebClient client = new WebClient())
             {
-                LoadingBar progress = new LoadingBar();
-                client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(progress.DownloadProgressCallback);
+                //Get the loading bar ready
+                client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(LoadingBar.DownloadProgressCallback);
                 Task<string> json;
+                //Get repository from appropriate place
                 #if (DEBUG)
                     json = client.DownloadStringTaskAsync("http://127.0.0.1:8000/packages.json");
                 #else
                     json = DownloadStringTaskAsync("https://raw.githubusercontent.com/ItsMajestiX/ServerModManager/master/packages.json");
                 #endif
+                //Serialize to object
                 string data = await json;
                 packages = JsonConvert.DeserializeObject<PackageOverview>(data).packages;
                 return true;
@@ -42,10 +44,10 @@ namespace ServerModManager
             }
             return null;
         }
-
         //So the main method doesn't have to use async
         public bool GenPackages()
         {
+            //Catch common exceptions
             try
             {
                 return GetPackages().Result;

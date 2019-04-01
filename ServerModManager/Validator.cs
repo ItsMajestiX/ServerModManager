@@ -25,10 +25,12 @@ namespace ServerModManager
         public bool pluginsExist = false;
         public bool dependenciesExist = false;
 
+        //For commands that need a package name
         public string packageName = null;
 
         public Validator(string[] args)
         {
+            //Does the user want help?
             bool help = false;
             try
             {
@@ -37,10 +39,12 @@ namespace ServerModManager
                     help = true;
                 }
             }
+            //In case the user runs scpman by itself
             catch (InvalidOperationException) 
             {
                 help = true;
             }
+            //Check if directories exist so we don't get errors
             if (Directory.Exists("../sm_plugins"))
             {
                 pluginsExist = true;
@@ -61,6 +65,7 @@ namespace ServerModManager
                 //Figure out which command we ran
                 switch (args[0])
                 {
+                    //scpman help
                     case "help":
                         opType = OP_TYPE.MAIN_HELP;
                         break;
@@ -69,6 +74,7 @@ namespace ServerModManager
                         //ensure we have a package name
                         if (len < 2)
                         {
+                            //Always display usage if used incorrectly
                             Console.WriteLine("ERROR: Usage scpman install packagename");
                             opType = OP_TYPE.INSTALL_HELP;
                         }

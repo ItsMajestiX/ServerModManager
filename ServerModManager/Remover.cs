@@ -9,10 +9,13 @@ namespace ServerModManager
     {
         internal static void remove(Validator val, PackageOverview overview)
         {
+            //Find package to remove
             Package package = overview.GetPackageWithName(val.packageName);
+            //Remove it if it exists
             if (package != null)
             {
                 Console.WriteLine("Removing package " + val.packageName);
+                //Remove from appropriate places
                 if (!package.isDependency)
                 {
                     if (val.pluginsExist)

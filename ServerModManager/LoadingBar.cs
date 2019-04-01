@@ -5,34 +5,12 @@ using System.Text;
 
 namespace ServerModManager
 {
-    //This excelent code from https://stackoverflow.com/users/54026/daniel-ballinger
-    internal class ConsoleSpiner
-    {
-        int counter;
-        public ConsoleSpiner()
-        {
-            counter = 0;
-        }
-        public void Turn()
-        {
-            counter++;
-            switch (counter % 4)
-            {
-                case 0: Console.Write("/"); break;
-                case 1: Console.Write("-"); break;
-                case 2: Console.Write("\\"); break;
-                case 3: Console.Write("|"); break;
-            }
-            Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
-        }
-    }
-
     class LoadingBar
     {
-        public LoadingBar()
-        {
-        }
-        public void DownloadProgressCallback(object sender, DownloadProgressChangedEventArgs e)
+        public LoadingBar() { }
+
+        //Copied straight from the .NET docs
+        public static void DownloadProgressCallback(object sender, DownloadProgressChangedEventArgs e)
         {
             // Displays the operation identifier, and the transfer progress.
             Console.Write("\rDownloaded {0} of {1} bytes. {2} % complete... ",
@@ -44,6 +22,7 @@ namespace ServerModManager
                 Console.Write("\n");
             }
         }
+        //Buggy at the moment, sometimes is run before the loading bar
         //public void DownloadFinishedCallback(object sender, DownloadStringCompletedEventArgs e)
         //{
         //    Console.WriteLine("Done.");

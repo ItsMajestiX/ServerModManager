@@ -38,6 +38,7 @@ namespace ServerModManager
                     }
                 }
             }
+            //In case we need to display help
             else
             {
                 switch (validator.opType)
