@@ -24,6 +24,7 @@
 <li>Don’t dump stack trace</li>
 <li>Update command</li>
 <li>Futureproof JSON</li>
+<li>Add incompatibilities</li>
 </ul>
 <h1 id="for-modders">For Modders</h1>
 <p>Get your mod added to the list! Either send me an email at <a href="mailto:smmsubmissions@smmsubmissions.33mail.com">smmsubmissions@smmsubmissions.33mail.com</a> or DM me on discord at MajestiX#7652.</p>
