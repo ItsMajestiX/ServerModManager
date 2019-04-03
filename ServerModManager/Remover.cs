@@ -14,21 +14,22 @@ namespace ServerModManager
             //Remove it if it exists
             if (package != null)
             {
-                Console.WriteLine("Removing package " + val.packageName);
-                //Remove from appropriate places
-                if (!package.isDependency)
+                if (File.Exists("../sm_plugins/" + package.downloadLocation))
                 {
-                    if (val.pluginsExist)
+                    Console.WriteLine("Removing package " + val.packageName);
+                    //Remove
+                    if (val.pluginsExist && val.dependenciesExist)
                     {
-                        File.Delete("../sm_plugins/" + package.filename);
+                        File.Delete("../sm_plugins/" + package.downloadLocation);
+                    }
+                    else
+                    {
+                        Console.WriteLine("ERROR: sm_plugins and/or dependencies could not be found. Did you unzip all the app files into a folder at the same level as sm_plugins?");
                     }
                 }
                 else
                 {
-                    if (val.pluginsExist && val.dependenciesExist)
-                    {
-                        File.Delete("../sm_plugins/dependencies/" + package.filename);
-                    }
+                    Console.WriteLine("ERROR: You have not installed that package!");
                 }
             }
             else

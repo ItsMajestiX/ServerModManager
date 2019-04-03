@@ -9,20 +9,22 @@ namespace ServerModManager
         public string author;
         public string version;
         public List<string> dependencies;
+        //Soon, but not yet
+        //public List<string> incompatibilities;
         public string downloadLink;
-        public string filename;
-        public bool isDependency;
+        public string downloadLocation;
 
         //Testing constructor
-        public Package(string name, string author, string version, List<string> dependencies, string downloadLink, string filename, bool isDependency)
+        public Package(string name, string author, string version, List<string> dependencies, string downloadLink, string downloadLocation)
         {
             this.name = name;
             this.author = author;
             this.version = version;
             this.dependencies = dependencies;
             this.downloadLink = downloadLink;
-            this.filename = filename;
-            this.isDependency = isDependency;
+            this.downloadLocation = downloadLocation;
+            //Soon
+            //this.incompatibilities = incompatibilities;
         }
     }
 }

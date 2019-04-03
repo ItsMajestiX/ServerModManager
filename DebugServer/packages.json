@@ -1,4 +1,245 @@
 {
   "packages": [
+    {
+      "name": "914customrecipes",
+      "author": "storm37000",
+      "version": "1.0.5",
+      "dependencies": [],
+      "downloadLink": "https://github.com/storm37000/SCPSL_Smod_914_custom_recipes/releases/download/1.0.5/custom914recip.dll",
+      "downloadLocation": "custom914recip.dll"
+    },
+    {
+      "name": "914helditems",
+      "author": "storm37000",
+      "version": "1.0.9",
+      "dependencies": [],
+      "downloadLink": "https://github.com/storm37000/SCPSL_Smod_914_held_items/releases/download/1.0.9/914inhand.dll",
+      "downloadLocation": "914inhand.dll"
+    },
+    {
+      "name": "admintoolbox",
+      "author": "Rnen",
+      "version": "1.3.8",
+      "dependencies": [ "atautoupdate" ],
+      "downloadLink": "https://github.com/Rnen/AdminToolbox/releases/download/1.3.8/AdminToolbox.dll",
+      "downloadLocation": "AdminToolbox.dll"
+    },
+    {
+      "name": "atautoupdate",
+      "author": "Rnen",
+      "version": "N/A",
+      "dependencies": [],
+      "downloadLink": "https://github.com/Rnen/AdminToolbox/releases/download/1.3.8/AT_AutoUpdate.bat",
+      "downloadLocation": "AT_AutoUpdate.bat"
+    },
+    {
+      "name": "betterdisarming",
+      "author": "Cyanox62",
+      "version": "0.7",
+      "dependencies": [],
+      "downloadLink": "https://github.com/Cyanox62/BetterDisarming/releases/download/0.7/BetterDisarming.dll",
+      "downloadLocation": "BetterDisarming.dll"
+    },
+    {
+      "name": "blackout",
+      "author": "Furdrox, Cyanox62",
+      "version": "v1.1.2",
+      "dependencies": [],
+      "downloadLink": "https://github.com/probe4aiur/Blackout/releases/download/v1.1.2/Blackout.dll",
+      "downloadLocation": "Blackout.dll"
+    },
+    {
+      "name": "customannouncements",
+      "author": "Cyanox62",
+      "version": "1.7",
+      "dependencies": [],
+      "downloadLink": "https://github.com/Cyanox62/CustomAnnouncements/releases/download/1.7/CustomAnnouncements.dll",
+      "downloadLocation": "CustomAnnouncements.dll"
+    },
+    {
+      "name": "custombroadcasts",
+      "author": "Laserman",
+      "version": "N/A",
+      "dependencies": [],
+      "downloadLink": "https://cdn.discordapp.com/attachments/561203137281785876/561325742961721385/CustomBroadcasts.dll",
+      "downloadLocation": "CustomBroadcasts.dll"
+    },
+    {
+      "name": "customdooraccess",
+      "author": "Faeety",
+      "version": "1.3.3",
+      "dependencies": [],
+      "downloadLink": "https://github.com/Faeety/CustomDoorAccess/releases/download/1.3.3/CustomDoorAccess.dll",
+      "downloadLocation": "CustomDoorAccess.dll"
+
+    },
+    {
+      "name": "customrespawns",
+      "author": "Laserman",
+      "version": "N/A",
+      "dependencies": [],
+      "downloadLink": "https://cdn.discordapp.com/attachments/461569389292945419/526477498767114243/CustomRespawns.dll",
+      "downloadLocation": "CustomRespawns.dll"
+    },
+    {
+      "name": "deathnade",
+      "author": "Furdrox",
+      "version": "N/A",
+      "dependencies": [],
+      "downloadLink": "https://gitlab.com/4aiur/DeathNade/-/jobs/167430591/artifacts/file/DeathNade.dll",
+      "downloadLocation": "DeathNade.dll"
+    },
+    {
+      "name": "defaultammo",
+      "author": "storm37000",
+      "version": "1.0.5",
+      "dependencies": [],
+      "downloadLink": "https://github.com/storm37000/SCPSL_Smod_DefaultAmmo/releases/download/1.0.5/DefaultAmmo.dll",
+      "downloadLocation": "DefaultAmmo.dll"
+    },
+    {
+      "name": "donortag",
+      "author": "PatPeter",
+      "version": "4.1",
+      "dependencies": [],
+      "downloadLink": "https://github.com/PatPeter/SCPSL-Donator-Tag/releases/download/4.1/DonorTag.dll",
+      "downloadLocation": "DonorTag.dll"
+    },
+    {
+      "name": "endconditions",
+      "author": "Laserman",
+      "version": "N/A",
+      "dependencies": [],
+      "downloadLink": "https://cdn.discordapp.com/attachments/473211249799200771/526477575695106069/EndConditions.dll",
+      "downloadLocation": "EndConditions.dll"
+    },
+    {
+      "name": "friendlyfireautoban",
+      "author": "PatPeter",
+      "version": "3.0.3",
+      "dependencies": [],
+      "downloadLink": "https://github.com/PatPeter/FriendlyFireAutoban/releases/download/3.0.3/FriendlyFireAutoban.dll",
+      "downloadLocation": "FriendlyFireAutoban.dll"
+    },
+    {
+      "name": "georestrictionsdata",
+      "author": "MaxMind",
+      "version": "N/A",
+      "dependencies": [],
+      "downloadLink": "https://github.com/Aquazus/GeoRestrictions/releases/download/1.0.1/geoip.dat",
+      "downloadLocation": "../geoip.dat"
+    },
+    {
+      "name": "georestrictions",
+      "author": "Aquazus",
+      "version": "1.0.1",
+      "dependencies": [ "georestrictionsdata" ],
+      "downloadLink": "https://github.com/Aquazus/GeoRestrictions/releases/download/1.0.1/GeoRestrictions.dll",
+      "downloadLocation": "GeoRestrictions.dll"
+    },
+    {
+      "name": "laterjoin",
+      "author": "storm37000",
+      "version": "1.1.15",
+      "dependencies": [],
+      "downloadLink": "https://github.com/storm37000/SCPSL_Smod_LaterJoin/releases/download/1.1.15/laterjoin.dll",
+      "downloadLocation": "laterjoin.dll"
+    },
+    {
+      "name": "lone079",
+      "author": "Laserman",
+      "version": "N/A",
+      "dependencies": [],
+      "downloadLink": "https://cdn.discordapp.com/attachments/531577105432182797/556780950001025055/Lone079.dll",
+      "downloadLocation": "Lone079.dll"
+    },
+    {
+      "name": "motd",
+      "author": "storm37000",
+      "version": "1.0.0",
+      "dependencies": [],
+      "downloadLink": "https://github.com/storm37000/SCPSL_Smod_MOTD/releases/download/1.0.0/MOTD.dll",
+      "downloadLocation": "MOTD.dll"
+    },
+    {
+      "name": "patreonplugin",
+      "author": "Dankrushen",
+      "version": "v1.9",
+      "dependencies": [],
+      "downloadLink": "https://github.com/Dankrushen/PatreonPlugin/releases/download/v1.9/PatreonPlugin.dll",
+      "downloadLocation": "PatreonPlugin.dll"
+    },
+    {
+      "name": "playerpreferences",
+      "author": "Furdrox",
+      "version": "v1.2.1",
+      "dependencies": [],
+      "downloadLink": "https://github.com/probe4aiur/PlayerPreferences/releases/download/v1.2.1/PlayerPreferences.dll",
+      "downloadLocation": "PlayerPreferences.dll"
+    },
+    {
+      "name": "playerxp",
+      "author": "Cyanox62",
+      "version": "1.0",
+      "dependencies": [],
+      "downloadLink": "https://github.com/Cyanox62/PlayerXP/releases/download/1.0/PlayerXP.dll",
+      "downloadLocation": "PlayerXP.dll"
+    },
+    {
+      "name": "roleclass",
+      "author": "lordofkhaos",
+      "version": "v2.0.0",
+      "dependencies": [],
+      "downloadLink": "https://github.com/lordofkhaos/RoleClass-Smod2-Plugin/releases/download/v2.0.0/RoleClass.dll",
+      "downloadLocation": "RoleClass.dll"
+    },
+    {
+      "name": "scp343",
+      "author": "MrMith",
+      "version": "1.3.8",
+      "dependencies": [],
+      "downloadLink": "https://github.com/MrMith/SCP-343/releases/download/1.3.8/SCP-343.dll",
+      "downloadLocation": "SCP-343.dll"
+    },
+    {
+      "name": "scpsl_smod_servernamevars",
+      "author": "storm37000",
+      "version": "1.0.4",
+      "dependencies": [],
+      "downloadLink": "https://github.com/storm37000/SCPSL_Smod_ServerNameVars/releases/download/1.0.4/servernamevar.dll",
+      "downloadLocation": "servernamevar.dll"
+    },
+    {
+      "name": "serpentshand",
+      "author": "Cyanox62",
+      "version": "0.7",
+      "dependencies": [],
+      "downloadLink": "https://github.com/Cyanox62/SerpentsHand/releases/download/0.7/SerpentsHand.dll",
+      "downloadLocation": "SerpentsHand.dll"
+    },
+    {
+      "name": "speedrun",
+      "author": "LewisTehMinerz",
+      "version": "1.0.0-alpha",
+      "dependencies": [],
+      "downloadLink": "https://github.com/LewisTehMinerz/Speedrun/releases/download/1.0.0-alpha/Speedrun.dll",
+      "downloadLocation": "Speedrun.dll"
+    },
+    {
+      "name": "stayshut",
+      "author": "storm37000",
+      "version": "1.0.10",
+      "dependencies": [],
+      "downloadLink": "https://github.com/storm37000/SCPSL_Smod_StayShut/releases/download/1.0.10/stayshut.dll",
+      "downloadLocation": "stayshut.dll"
+    },
+    {
+      "author": "KarlOfDuty",
+      "dependencies": [],
+      "downloadLink": "https://github.com/KarlOfDuty/VPNShield/releases/download/3.1.2/VPNShield.dll",
+      "downloadLocation": "VPNShield.dll",
+      "name": "vpnshield",
+      "version": "3.1.2"
+    }
   ]
 }

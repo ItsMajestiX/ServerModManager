@@ -19,28 +19,14 @@ namespace ServerModManager
             {
                 //Setup loading bar
                 client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(LoadingBar.DownloadProgressCallback);
-                //Download file to appropriate directory after checking if the folders exist
-                if (!package.isDependency)
+                //Download file to directory after checking if the folders exist
+                if (val.pluginsExist && val.dependenciesExist)
                 {
-                    if (val.pluginsExist)
-                    {
-                        await client.DownloadFileTaskAsync(package.downloadLink, "../sm_plugins/" + package.filename);
-                    }
-                    else
-                    {
-                        Console.WriteLine("ERROR: sm_plugins could not be found. Did you unzip all the app files into a folder at the same level as sm_plugins?");
-                    }
+                    await client.DownloadFileTaskAsync(package.downloadLink, "../sm_plugins/" + package.downloadLocation);
                 }
                 else
                 {
-                    if (val.pluginsExist && val.dependenciesExist)
-                    {
-                        await client.DownloadFileTaskAsync(package.downloadLink, "../sm_plugins/dependencies/" + package.filename);
-                    }
-                    else
-                    {
-                        Console.WriteLine("ERROR: sm_plugins and/or dependencies could not be found. Did you unzip all the app files into a folder at the same level as sm_plugins?");
-                    }
+                    Console.WriteLine("ERROR: sm_plugins and/or dependencies could not be found. Did you unzip all the app files into a folder at the same level as sm_plugins?");
                 }
             }
         }
