@@ -9,6 +9,7 @@ namespace ServerModManager
         //The main piece
         static async Task GetFile(Package package, PackageOverview overview, Validator val)
         {
+            Console.WriteLine("Downloading " + val.packageName);
             //Download dependencies first
             foreach (string i in package.dependencies)
             {
@@ -50,7 +51,6 @@ namespace ServerModManager
             Package info = overview.GetPackageWithName(val.packageName);
             if (info != null)
             {
-                Console.WriteLine("Downloading " + val.packageName);
                 GetFile(info, overview, val).Wait();
             }
             else
