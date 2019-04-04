@@ -50,11 +50,12 @@ namespace ServerModManager
             //Catch common exceptions
             try
             {
+                Console.WriteLine("Downloading package list.");
                 return GetPackages().Result;
             }
             catch (AggregateException e)
             {
-                if (e.InnerExceptions[0] is HttpRequestException)
+                if (e.InnerExceptions[0] is WebException)
                 {
                     Console.WriteLine("ERROR: Error getting the packages from the server. Check your internet connection.");
                     return false;

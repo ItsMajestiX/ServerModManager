@@ -7,16 +7,14 @@ namespace ServerModManager
 {
     class Remover
     {
-        internal static void remove(Validator val, PackageOverview overview)
+        public static void remove(Package package, Validator val)
         {
-            //Find package to remove
-            Package package = overview.GetPackageWithName(val.packageName);
             //Remove it if it exists
             if (package != null)
             {
                 if (File.Exists("../sm_plugins/" + package.downloadLocation))
                 {
-                    Console.WriteLine("Removing package " + val.packageName);
+                    Console.WriteLine("Removing package " + package.name);
                     //Remove
                     if (val.pluginsExist && val.dependenciesExist)
                     {
@@ -35,6 +33,14 @@ namespace ServerModManager
             else
             {
                 Console.WriteLine("ERROR: No package with name " + val.packageName);
+            }
+        }
+        public static void removePackages(Validator val, PackageOverview overview)
+        {
+            foreach (string i in val.packageNames)
+            {
+                Package current = overview.GetPackageWithName(i);
+                remove(current, val);
             }
         }
     }

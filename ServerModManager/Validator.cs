@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -26,7 +27,7 @@ namespace ServerModManager
         public bool dependenciesExist = false;
 
         //For commands that need a package name
-        public string packageName = null;
+        public List<string> packageNames =  new List<string> { };
 
         public Validator(string[] args)
         {
@@ -84,7 +85,10 @@ namespace ServerModManager
                             if (!help)
                             {
                                 opType = OP_TYPE.INSTALL;
-                                packageName = args[1];
+                                foreach (string i in args[1..args.Length])
+                                {
+                                    packageName.Add(i);
+                                }
                                 success = true;
                             }
                             else
@@ -106,7 +110,10 @@ namespace ServerModManager
                             {
                                 //fill out details
                                 opType = OP_TYPE.REMOVE;
-                                packageName = args[1];
+                                foreach (string i in args[1..args.Length])
+                                {
+                                    packageName.Add(i);
+                                }
                                 success = true;
                             }
                             else
