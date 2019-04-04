@@ -32,7 +32,7 @@ steps:
   displayName: 'Install .NET'
 - script: dotnet publish -c $(buildConfiguration) -o $(Build.BinariesDirectory)
   displayName: 'dotnet publish'
-- script: $(command) $(file) ServerModManager$(ext) scpman$(ext)
+- script: $(command) ServerModManager$(ext) scpman$(ext)
   workingDirectory: $(Build.BinariesDirectory)
   displayName: 'rename'
 - task: ArchiveFiles@2
