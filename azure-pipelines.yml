@@ -24,6 +24,18 @@ steps:
   inputs:
     packageType: 'sdk'
     version: '3.0.100-preview3-010431'
-- script: dotnet publish -c $(buildConfiguration)
-  displayName: 'dotnet publish $(buildConfiguration)'
+- script: dotnet publish -c $(buildConfiguration) -o $(Build.BinariesDirectory)
+  displayName: 'dotnet publish $(buildConfiguration) -o $(Build.BinariesDirectory)'
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: $(Build.ArtifactStagingDirectory)/$(imageName).zip
+    replaceExistingArchive: true
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+    artifactName: $(imageName)
+    publishLocation: 'container' # Options: container, filePath
 
