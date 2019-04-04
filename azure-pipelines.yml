@@ -3,6 +3,9 @@
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
+trigger:
+- master
+
 strategy:
   matrix:
     linux:
@@ -21,6 +24,6 @@ steps:
   inputs:
     packageType: 'sdk'
     version: '3.0.100-preview3-010431'
-- script: dotnet publish --c $(buildConfiguration)
+- script: dotnet publish -c $(buildConfiguration)
   displayName: 'dotnet publish $(buildConfiguration)'
 
