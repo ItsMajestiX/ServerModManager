@@ -10,6 +10,8 @@
 <p>Install by simply running <code>scpman install packagename</code>, and remove with <code>scpman remove packagename</code>. Simple!</p>
 <p>Dependencies are automatically taken care of, so you don’t have to install everything one at a time.</p>
 <p>Uses .NET Core, so it can be run on Windows and Linux (and maybe even OS X…)</p>
+<h1 id="azure-builds">Azure Builds</h1>
+<p>If you want fresh off the press packages, get them <a href="https://dev.azure.com/ItsMajestiX/ServerModManager/">here</a> under the most recent build as artifacts. Releases do nothing, so don’t go there.</p>
 <h1 id="install">Install</h1>
 <p>Create a new folder at the same level as sm_plugins and unzip the files there. Now you’re good to go!</p>
 <h1 id="packages">Packages</h1>
@@ -20,8 +22,6 @@
 <p>The directory TestingServer is a directory you can use to debug the program without needing to download from the repository. Just install Python 3 and run server.bat.</p>
 <h1 id="to-do">To Do</h1>
 <ul>
-<li>Framework Dependant Executable to remove the need for all those pesky extra DLLs (most likely coming with .NET Core 3.0 and VS 2019, so hopefully soon)</li>
-<li>Don’t dump stack trace</li>
 <li>Update command</li>
 <li>Futureproof JSON</li>
 <li>Add incompatibilities</li>
