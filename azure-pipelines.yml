@@ -10,16 +10,14 @@ strategy:
   matrix:
     linux:
       imageName: 'ubuntu-16.04'
-      variables:
-        folderName: 'linux-x64'
-        command: 'mv'
-        ext: ''
+      folderName: 'linux-x64'
+      command: 'mv'
+      ext: ''
     windows:
       imageName: 'windows-2019'
-      variables:
-        folderName: 'win-x64'
-        command: 'ren'
-        ext: '.exe'
+      folderName: 'win-x64'
+      command: 'ren'
+      ext: '.exe'
 
 
 variables:
