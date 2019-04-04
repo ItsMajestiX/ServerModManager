@@ -27,7 +27,7 @@ namespace ServerModManager
                             Help.InstallHelp();
                             break;
                         case Validator.OP_TYPE.REMOVE:
-                            Remover.remove(validator, overview);
+                            Remover.removePackages(validator, overview);
                             break;
                         case Validator.OP_TYPE.REMOVE_HELP:
                             Help.RemoveHelp();

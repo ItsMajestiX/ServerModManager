@@ -32,7 +32,7 @@ namespace ServerModManager
             }
             else
             {
-                Console.WriteLine("ERROR: No package with name " + val.packageName);
+                Console.WriteLine("ERROR: No package with name " + package.name);
             }
         }
         public static void removePackages(Validator val, PackageOverview overview)

@@ -87,7 +87,7 @@ namespace ServerModManager
                                 opType = OP_TYPE.INSTALL;
                                 foreach (string i in args[1..args.Length])
                                 {
-                                    packageName.Add(i);
+                                    packageNames.Add(i);
                                 }
                                 success = true;
                             }
@@ -112,7 +112,7 @@ namespace ServerModManager
                                 opType = OP_TYPE.REMOVE;
                                 foreach (string i in args[1..args.Length])
                                 {
-                                    packageName.Add(i);
+                                    packageNames.Add(i);
                                 }
                                 success = true;
                             }
