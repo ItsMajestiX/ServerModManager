@@ -10,8 +10,17 @@ strategy:
   matrix:
     linux:
       imageName: 'ubuntu-16.04'
+      variables:
+        folderName: 'linux-x64'
+        command: 'mv'
+        ext: ''
     windows:
       imageName: 'windows-2019'
+      variables:
+        folderName: 'win-x64'
+        command: 'ren'
+        ext: '.exe'
+
 
 variables:
   buildConfiguration: 'Release'
@@ -27,15 +36,9 @@ steps:
   displayName: 'Install .NET'
 - script: dotnet publish -c $(buildConfiguration) -o $(Build.BinariesDirectory)
   displayName: 'dotnet publish'
-- script: find $(Build.ArtifactStagingDirectory)/$(imageName) -name ServerModManager -exec mv ServerModManager scpman \;
-  failOnStderr: false
-  displayName: 'Rename on Linux'
-- task: PowerShell@2
-  inputs:
-    targetType: inline
-    script: Rename-Item -Path $(Build.ArtifactStagingDirectory)/$(imageName)/ServeModManager.exe -NewName "scpman.exe"
-    failOnStderr: false
-  displayName: 'Rename on Windows'
+- script: $(command) $(file) ServerModManager$(ext) scpman$(ext)
+  workingDirectory: $(Build.BinariesDirectory)/$(folderName)
+  displayName: 'rename'
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.BinariesDirectory)'
