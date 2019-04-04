@@ -16,7 +16,7 @@ namespace ServerModManager
             {
                 await GetFile(overview.GetPackageWithName(i), overview, val);
             }
-            if (File.Exists("../sm_plugins/" + package.downloadLocation)) 
+            if (!File.Exists("../sm_plugins/" + package.downloadLocation)) 
             {
                 using (WebClient client = new WebClient())
                 {
