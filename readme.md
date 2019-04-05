@@ -10,7 +10,7 @@
 <p>Install by simply running <code>scpman install packagename</code>, and remove with <code>scpman remove packagename</code>. Simple!</p>
 <p>Dependencies are automatically taken care of, so you don’t have to install everything one at a time.</p>
 <p>Uses .NET Core, so it can be run on Windows and Linux (and maybe even OS X…)</p>
-<h1 id="azure-builds">Azure Builds</h1>
+<h1 id="ci-builds">CI Builds</h1>
 <p>If you want fresh off the press packages, get them <a href="https://dev.azure.com/ItsMajestiX/ServerModManager/">here</a> under the most recent build as artifacts. Releases do nothing, so don’t go there.</p>
 <h1 id="install">Install</h1>
 <p>Create a new folder at the same level as sm_plugins and unzip the files there. Now you’re good to go!</p>
