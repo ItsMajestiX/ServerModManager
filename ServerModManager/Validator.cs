@@ -52,6 +52,7 @@ namespace ServerModManager
                 help = true;
             }
             //Check if directories exist so we don't get errors
+            //Will be depreciated soon
             if (Directory.Exists("../sm_plugins"))
             {
                 pluginsExist = true;
@@ -136,28 +137,35 @@ namespace ServerModManager
                         }
                         else
                         {
-                            if (args[1] == "*")
+                            if (!help)
                             {
-                                if (args.Length == 2)
+                                if (args[1] == "*")
                                 {
-                                    updateAll = true;
-                                    opType = OP_TYPE.UPDATE;
-                                    success = true;
+                                    if (args.Length == 2)
+                                    {
+                                        updateAll = true;
+                                        opType = OP_TYPE.UPDATE;
+                                        success = true;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("ERROR: Usage scpman update *");
+                                        opType = OP_TYPE.UPDATE_HELP;
+                                    }
                                 }
                                 else
                                 {
-                                    Console.WriteLine("ERROR: Usage scpman update *");
-                                    opType = OP_TYPE.UPDATE_HELP;
+                                    foreach (string i in args[1..args.Length])
+                                    {
+                                        packageNames.Add(i);
+                                    }
+                                    opType = OP_TYPE.UPDATE;
+                                    success = true;
                                 }
                             }
                             else
                             {
-                                foreach (string i in args[1..args.Length])
-                                {
-                                    packageNames.Add(i);
-                                }
-                                opType = OP_TYPE.UPDATE;
-                                success = true;
+                                opType = OP_TYPE.REMOVE_HELP;
                             }
                         }
                         break;

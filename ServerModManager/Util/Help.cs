@@ -12,7 +12,8 @@ namespace ServerModManager
             Console.WriteLine("USAGE:\n" +
                 "scpman help: Displays this message.\n" +
                 "scpman install: Installs packages.\n" +
-                "scpman remove: Removes packages.");
+                "scpman remove: Removes packages. \n" +
+                "scpman update: Updates packages.");
         }
 
         public static void InstallHelp()
@@ -25,6 +26,13 @@ namespace ServerModManager
         {
             Console.WriteLine("USAGE: \n" + 
                 "scpman remove packagename [packagename2 packagename3]: Removes package packagename and optionally others listed.");
+        }
+
+        public static void UpdateHelp()
+        {
+            Console.WriteLine("USAGE: \n" +
+                "scpman update *: Updates all installed packages.\n" +
+                "scpman update package [package2 package3]: Updates packages listed.");
         }
     }
 }
