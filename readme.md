@@ -22,8 +22,10 @@
 <p>The directory TestingServer is a directory you can use to debug the program without needing to download from the repository. Just install Python 3 and run server.bat.</p>
 <h1 id="to-do">To Do</h1>
 <ul>
-<li>Update command</li>
 <li>Futureproof JSON</li>
+<li>Force update command</li>
+<li>Install from file of requirements</li>
+<li>Depreciate Validator.pluginsExist and Validator.dependenciesExist</li>
 <li>Add incompatibilities</li>
 </ul>
 <h1 id="for-modders">For Modders</h1>
