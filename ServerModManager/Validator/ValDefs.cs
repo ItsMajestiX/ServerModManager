@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ServerModManager
+{
+    partial class Validator
+    {
+        //Make enum for easier time reading code
+        public enum OP_TYPE
+        {
+            INVALID,
+            MAIN_HELP = 0,
+            INSTALL = 1,
+            INSTALL_HELP = -1,
+            REMOVE = 2,
+            REMOVE_HELP = -2,
+            UPDATE = 3,
+            UPDATE_HELP = -3
+        }
+
+        //Define values that can be set by command
+        public bool success = false;
+        public OP_TYPE opType = OP_TYPE.INVALID;
+
+        //Ensure plugin folders are found
+        public bool pluginsExist = false;
+        public bool dependenciesExist = false;
+
+        //For commands that need package names
+        public List<string> packageNames = new List<string> { };
+
+        //Update command
+        public bool forceUpdate = false;
+        public bool updateAll = false;
+    }
+}

@@ -31,8 +31,10 @@ namespace ServerModManager
         public static void UpdateHelp()
         {
             Console.WriteLine("USAGE: \n" +
-                "scpman update *: Updates all installed packages.\n" +
-                "scpman update package [package2 package3]: Updates packages listed.");
+                "scpman update [-f] *: Updates all installed packages.\n" +
+                "scpman update [-f] package [package2 package3]: Updates packages listed.\n" +
+                "FLAGS: \n" +
+                "f: Overwrites the old file with the new one even if they are the same.");
         }
     }
 }
