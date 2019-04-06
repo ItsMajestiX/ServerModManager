@@ -2,7 +2,7 @@
   "profiles": {
     "ServerModManager": {
       "commandName": "Project",
-      "commandLineArgs": "install 914helditems lone079 custombroadcasts"
+      "commandLineArgs": "update *"
     }
   }
 }

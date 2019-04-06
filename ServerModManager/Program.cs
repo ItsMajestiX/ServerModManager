@@ -14,6 +14,7 @@ namespace ServerModManager
                 PackageOverview overview = new PackageOverview();
                 if (overview.GenPackages())
                 {
+                    Console.WriteLine((int)validator.opType);
                     //What command are we running?
                     switch (validator.opType)
                     {
@@ -31,6 +32,9 @@ namespace ServerModManager
                             break;
                         case Validator.OP_TYPE.REMOVE_HELP:
                             Help.RemoveHelp();
+                            break;
+                        case Validator.OP_TYPE.UPDATE:
+                            Update.update(validator, overview);
                             break;
                         default:
                             Console.WriteLine("Unknown error");

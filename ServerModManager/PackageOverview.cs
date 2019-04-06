@@ -44,6 +44,19 @@ namespace ServerModManager
             }
             return null;
         }
+
+        public Package GetPackageWithPath(string path)
+        {
+            foreach (Package i in packages)
+            {
+                if (i.downloadLocation == path)
+                {
+                    return i;
+                }
+            }
+            return null;
+        }
+
         //So the main method doesn't have to use async
         public bool GenPackages()
         {

@@ -15,7 +15,9 @@ namespace ServerModManager
             INSTALL = 1,
             INSTALL_HELP = -1,
             REMOVE = 2,
-            REMOVE_HELP = -2
+            REMOVE_HELP = -2,
+            UPDATE = 3,
+            UPDATE_HELP = -3
         }
 
         //Define values that can be set by command
@@ -26,9 +28,13 @@ namespace ServerModManager
         public bool pluginsExist = false;
         public bool dependenciesExist = false;
 
-        //For commands that need a package name
+        //For commands that need package names
         public List<string> packageNames =  new List<string> { };
 
+        //Update command
+        //Soon
+        //public bool forceUpdate = false;
+        public bool updateAll = false;
         public Validator(string[] args)
         {
             //Does the user want help?
@@ -119,6 +125,39 @@ namespace ServerModManager
                             else
                             {
                                 opType = OP_TYPE.REMOVE_HELP;
+                            }
+                        }
+                        break;
+                    case "update":
+                        if (len < 2)
+                        {
+                            Console.WriteLine("ERROR: Usage scpman update * \n scpman update package [package2, package3]");
+                            opType = OP_TYPE.UPDATE_HELP;
+                        }
+                        else
+                        {
+                            if (args[1] == "*")
+                            {
+                                if (args.Length == 2)
+                                {
+                                    updateAll = true;
+                                    opType = OP_TYPE.UPDATE;
+                                    success = true;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("ERROR: Usage scpman update *");
+                                    opType = OP_TYPE.UPDATE_HELP;
+                                }
+                            }
+                            else
+                            {
+                                foreach (string i in args[1..args.Length])
+                                {
+                                    packageNames.Add(i);
+                                }
+                                opType = OP_TYPE.UPDATE;
+                                success = true;
                             }
                         }
                         break;
