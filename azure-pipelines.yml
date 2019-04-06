@@ -1,0 +1,53 @@
+# ASP.NET Core
+# Build and test ASP.NET Core projects targeting .NET Core.
+# Add steps that run tests, create a NuGet package, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- master
+
+strategy:
+  matrix:
+    linux:
+      imageName: 'ubuntu-16.04'
+      command: 'mv'
+      ext: ''
+    windows:
+      imageName: 'windows-2019'
+      command: 'ren'
+      ext: '.exe'
+
+
+variables:
+  buildConfiguration: 'Release'
+
+pool:
+  vmImage: $(imageName)
+
+steps:
+- task: DotNetCoreInstaller@0
+  inputs:
+    packageType: 'sdk'
+    version: '3.0.100-preview3-010431'
+  displayName: 'Install .NET'
+- script: dotnet publish -c $(buildConfiguration) -o $(Build.BinariesDirectory)
+  displayName: 'dotnet publish'
+- script: $(command) ServerModManager$(ext) scpman$(ext)
+  workingDirectory: $(Build.BinariesDirectory)
+  displayName: 'rename'
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: $(Build.ArtifactStagingDirectory)/$(imageName).zip
+    replaceExistingArchive: true
+  displayName: 'Zip files'
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+    artifactName: $(imageName)
+    publishLocation: 'container' # Options: container, filePath
+  displayName: 'Save as artifact'
+
+
