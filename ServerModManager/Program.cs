@@ -21,19 +21,19 @@ namespace ServerModManager
                             Help.MainHelp();
                             break;
                         case Validator.OP_TYPE.INSTALL:
-                            Installer.install(validator, overview);
+                            Installer.InstallPackages(validator, overview);
                             break;
                         case Validator.OP_TYPE.INSTALL_HELP:
                             Help.InstallHelp();
                             break;
                         case Validator.OP_TYPE.REMOVE:
-                            Remover.removePackages(validator, overview);
+                            Remover.RemovePackages(validator, overview);
                             break;
                         case Validator.OP_TYPE.REMOVE_HELP:
                             Help.RemoveHelp();
                             break;
                         case Validator.OP_TYPE.UPDATE:
-                            Update.update(validator, overview);
+                            Updater.UpdatePackages(validator, overview);
                             break;
                         case Validator.OP_TYPE.UPDATE_HELP:
                             Help.UpdateHelp();

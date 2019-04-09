@@ -9,7 +9,7 @@ namespace ServerModManager
     {
         public LoadingBar() { }
 
-        //Copied straight from the .NET docs
+        //Copied straight from the .NET docs: https://docs.microsoft.com/en-us/dotnet/api/system.net.webclient.downloadprogresschanged
         public static void DownloadProgressCallback(object sender, DownloadProgressChangedEventArgs e)
         {
             // Displays the operation identifier, and the transfer progress.

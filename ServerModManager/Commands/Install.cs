@@ -8,7 +8,7 @@ namespace ServerModManager
     class Installer
     {
         //The main piece
-        static async Task GetFile(Package package, PackageOverview overview, Validator val)
+        private static async Task GetFile(Package package, PackageOverview overview, Validator val)
         {
             Console.WriteLine("Downloading " + package.name);
             //Download dependencies first
@@ -39,7 +39,7 @@ namespace ServerModManager
             }
         }
 
-        internal static void install(Validator val, PackageOverview overview)
+        public static void InstallPackages(Validator val, PackageOverview overview)
         {
             foreach (string i in val.packageNames)
             {
@@ -55,7 +55,5 @@ namespace ServerModManager
                 }
             }
         }
-
-        public Installer() { }
     }
 }

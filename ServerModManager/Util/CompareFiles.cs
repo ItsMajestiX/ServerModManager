@@ -5,10 +5,10 @@ using System.Text;
 
 namespace ServerModManager
 {
-    class CompareFiles
+    class FileCompare
     {
         //This code from https://support.microsoft.com/en-us/help/320348/how-to-create-a-file-compare-function-in-visual-c
-        public static bool compareFiles(string file1, string file2)
+        public static bool CompareFiles(string file1, string file2)
         {
             int file1byte;
             int file2byte;

@@ -14,11 +14,11 @@ namespace ServerModManager
 
         public void Dispose()
         {
-            cleanDirRecursive(dirName);
+            CleanDirRecursive(dirName);
             Directory.Delete(dirName);
         }
 
-        private void cleanDirRecursive(string root)
+        private void CleanDirRecursive(string root)
         {
             foreach (string i in Directory.EnumerateFiles(root))
             {
@@ -28,14 +28,14 @@ namespace ServerModManager
             {
                 if (Directory.EnumerateFiles(root + i).Count() + Directory.EnumerateDirectories(root + i).Count() > 0)
                 {
-                    cleanDirRecursive(root + i);
+                    CleanDirRecursive(root + i);
                 }
                 Directory.Delete(root + i);
             }
         }
 
         //This code from https://stackoverflow.com/questions/1344221/how-can-i-generate-random-alphanumeric-strings
-        private string randomString(int length)
+        private string RandomString(int length)
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             return new string(Enumerable.Repeat(chars, length)
@@ -45,7 +45,7 @@ namespace ServerModManager
         public TmpDir(string path)
         {
             random = new Random();
-            dirName = "tmp_" + randomString(8) + "/";
+            dirName = "tmp_" + RandomString(8) + "/";
             Directory.CreateDirectory(dirName);
         } 
     }
