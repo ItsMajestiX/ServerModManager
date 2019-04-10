@@ -33,6 +33,14 @@
       "downloadLocation": "AT_AutoUpdate.bat"
     },
     {
+      "name": "betteradmin", 
+      "author": "PhoenProject", 
+      "version": "1.1.1", 
+      "dependencies": [], 
+      "downloadLink": "https://github.com/PhoenProject/BetterAdmin/releases/download/1.1.1/BetterAdmin.dll", 
+      "downloadLocation": "BetterAdmin.dll"
+    },
+    {
       "name": "betterdisarming",
       "author": "Cyanox62",
       "version": "0.7",
@@ -42,7 +50,7 @@
     },
     {
       "name": "blackout",
-      "author": "Furdrox, Cyanox62",
+      "author": "probe4aiur, Cyanox62",
       "version": "v1.1.2",
       "dependencies": [],
       "downloadLink": "https://github.com/probe4aiur/Blackout/releases/download/v1.1.2/Blackout.dll",
@@ -83,7 +91,7 @@
     },
     {
       "name": "deathnade",
-      "author": "Furdrox",
+      "author": "probe4aiur",
       "version": "N/A",
       "dependencies": [],
       "downloadLink": "https://gitlab.com/4aiur/DeathNade/-/jobs/167430591/artifacts/file/DeathNade.dll",
@@ -96,6 +104,14 @@
       "dependencies": [],
       "downloadLink": "https://github.com/storm37000/SCPSL_Smod_DefaultAmmo/releases/download/1.0.5/DefaultAmmo.dll",
       "downloadLocation": "DefaultAmmo.dll"
+    },
+    {
+      "name": "disconnectdrop", 
+      "author": "NeonWizard", 
+      "version": "v1.7.0", 
+      "dependencies": [], 
+      "downloadLink": "https://github.com/NeonWizard/SCP-DisconnectDrop/releases/download/v1.7.0/DisconnectDrop.dll", 
+      "downloadLocation": "DisconnectDrop.dll"
     },
     {
       "name": "donortag",
@@ -138,12 +154,44 @@
       "downloadLocation": "GeoRestrictions.dll"
     },
     {
+      "name": "hmd", 
+      "author": "probe4aiur", 
+      "version": "v1.0.1", 
+      "dependencies": ["itemmanager"], 
+      "downloadLink": "https://github.com/probe4aiur/HMD/releases/download/v1.0.1/HMD.dll", 
+      "downloadLocation": "HMD.dll"
+    },
+    {
+      "name": "hs8", 
+      "author": "probe4aiur",
+      "version": "v1.1.1", 
+      "dependencies": ["itemmanager"], 
+      "downloadLink": "https://github.com/probe4aiur/HS8/releases/download/v1.1.1/HS8.dll", 
+      "downloadLocation": "HS8.dll"
+    },
+    {
+      "name": "itemmanager", 
+      "author": "probe4aiur", 
+      "version": "v1.0.3", 
+      "dependencies": [], 
+      "downloadLink": "https://github.com/probe4aiur/ItemManager/releases/download/v1.0.3/ItemManager.dll", 
+      "downloadLocation": "ItemManager.dll"
+    },
+    {
       "name": "laterjoin",
       "author": "storm37000",
       "version": "1.1.15",
       "dependencies": [],
       "downloadLink": "https://github.com/storm37000/SCPSL_Smod_LaterJoin/releases/download/1.1.15/laterjoin.dll",
       "downloadLocation": "laterjoin.dll"
+    },
+    {
+      "name": "loadingscreen", 
+      "author": "mattymatty97",
+      "version": "v1.2.0", 
+      "dependencies": [], 
+      "downloadLink": "https://github.com/mattymatty97/SCPSL_LoadingScreen/releases/download/v1.2.0/LoadingScreen.dll", 
+      "downloadLocation": "LoadingScreen.dll"
     },
     {
       "name": "lone079",
@@ -171,7 +219,7 @@
     },
     {
       "name": "playerpreferences",
-      "author": "Furdrox",
+      "author": "probe4aiur",
       "version": "v1.2.1",
       "dependencies": [],
       "downloadLink": "https://github.com/probe4aiur/PlayerPreferences/releases/download/v1.2.1/PlayerPreferences.dll",
@@ -202,7 +250,15 @@
       "downloadLocation": "SCP-343.dll"
     },
     {
-      "name": "scpsl_smod_servernamevars",
+      "name": "scp575", 
+      "author": "galaxy119", 
+      "version": "2.5.0", 
+      "dependencies": [], 
+      "downloadLink": "https://github.com/galaxy119/SCP-575/releases/download/2.5.0/SCP-575.dll", 
+      "downloadLocation": "SCP-575.dll"
+    },
+    {
+      "name": "servernamevars",
       "author": "storm37000",
       "version": "1.0.4",
       "dependencies": [],
@@ -232,6 +288,14 @@
       "dependencies": [],
       "downloadLink": "https://github.com/storm37000/SCPSL_Smod_StayShut/releases/download/1.0.10/stayshut.dll",
       "downloadLocation": "stayshut.dll"
+    },
+    {
+      "name": "tranquilizergun", 
+      "author": "NeonWizard", 
+      "version": "1.2.1", 
+      "dependencies": ["itemmanager"], 
+      "downloadLink": "https://github.com/NeonWizard/SCP-TranquilizerGun/releases/download/1.2.1/TranquilizerGun.dll", 
+      "downloadLocation": "TranquilizerGun.dll"
     },
     {
       "author": "KarlOfDuty",
