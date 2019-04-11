@@ -14,7 +14,7 @@ namespace ServerModManager
             {
                 Console.WriteLine("Removing package " + package.name);
                 //Remove
-                if (val.pluginsExist && val.dependenciesExist)
+                if (Directory.Exists(Path.GetDirectoryName("../sm_plugins/" + package.downloadLocation)))
                 {
                     File.Delete("../sm_plugins/" + package.downloadLocation);
                 }

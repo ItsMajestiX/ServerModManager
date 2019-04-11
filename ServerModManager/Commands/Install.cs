@@ -23,13 +23,13 @@ namespace ServerModManager
                     //Setup loading bar
                     client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(LoadingBar.DownloadProgressCallback);
                     //Download file to directory after checking if the folders exist
-                    if (val.pluginsExist && val.dependenciesExist)
+                    if (Directory.Exists(Path.GetDirectoryName("../sm_plugins/" + package.downloadLocation)))
                     {
                         await client.DownloadFileTaskAsync(package.downloadLink, "../sm_plugins/" + package.downloadLocation);
                     }
                     else
                     {
-                        Console.WriteLine("ERROR: sm_plugins and/or dependencies could not be found. Did you unzip all the app files into a folder at the same level as sm_plugins?");
+                        Console.WriteLine("ERROR: The folder to install to does not exist. Did you unzip all the app files into a folder at the same level as sm_plugins?");
                     }
                 }
             }

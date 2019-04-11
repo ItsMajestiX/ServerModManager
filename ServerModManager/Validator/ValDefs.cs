@@ -25,8 +25,8 @@ namespace ServerModManager
         public OP_TYPE opType = OP_TYPE.INVALID;
 
         //Ensure plugin folders are found
-        public bool pluginsExist = false;
-        public bool dependenciesExist = false;
+        //public bool pluginsExist = false;
+        //public bool dependenciesExist = false;
 
         //For commands that need package names
         public List<string> packageNames = new List<string> { };

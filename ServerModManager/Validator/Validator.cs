@@ -26,15 +26,15 @@ namespace ServerModManager
                 help = true;
             }
             //Check if directories exist so we don't get errors
-            //Will be depreciated soon
-            if (Directory.Exists("../sm_plugins"))
-            {
-                pluginsExist = true;
-                if (Directory.Exists("../sm_plugins/dependencies"))
-                {
-                    dependenciesExist = true;
-                }
-            }
+            //Depreciated
+            //if (Directory.Exists("../sm_plugins"))
+            //{
+            //    pluginsExist = true;
+            //    if (Directory.Exists("../sm_plugins/dependencies"))
+            //    {
+            //        dependenciesExist = true;
+            //    }
+            //}
             //Check length of arguments
             int len = args.GetLength(0);
             if (len < 1)
