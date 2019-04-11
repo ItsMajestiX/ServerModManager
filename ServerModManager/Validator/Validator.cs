@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
+//Abandon hope to all ye who dare to enter.
+//Must have made this at the same time I made TmpDir.cs
 namespace ServerModManager
 {
     partial class Validator

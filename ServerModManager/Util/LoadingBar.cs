@@ -22,7 +22,7 @@ namespace ServerModManager
                 Console.Write("\n");
             }
         }
-        //Buggy at the moment, sometimes is run before the loading bar
+        //Buggy at the moment, sometimes is run before the loading bar. Well, I guess the other one is no better, but we need that.
         //public void DownloadFinishedCallback(object sender, DownloadStringCompletedEventArgs e)
         //{
         //    Console.WriteLine("Done.");

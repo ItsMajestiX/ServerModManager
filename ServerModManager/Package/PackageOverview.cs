@@ -32,7 +32,7 @@ namespace ServerModManager
             }
         }
 
-        //Helper function
+        //Helper functions
         public Package GetPackageWithName(string name)
         {
             foreach (Package i in packages)
@@ -57,7 +57,7 @@ namespace ServerModManager
             return null;
         }
 
-        //So the main method doesn't have to use async
+        //So the main method doesn't have to use async and to catch errors.
         public bool GenPackages()
         {
             //Catch common exceptions

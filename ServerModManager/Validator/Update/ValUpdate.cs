@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
+//This is a nightmare, but it somehow works.
 namespace ServerModManager
 {
     partial class Validator
     {
+        //Called on scpman update
         private void ValUpdate(string[] args, bool help, int len)
         {
+            //Int return type is to offset where we look for other arguments
             int flag = UpdateFlags(args, len);
             if (flag == -1)
             {

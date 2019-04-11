@@ -7,7 +7,6 @@ namespace ServerModManager
 {
     class Installer
     {
-        //The main piece
         private static async Task GetFile(Package package, PackageOverview overview, Validator val)
         {
             Console.WriteLine("Downloading " + package.name);
@@ -16,6 +15,7 @@ namespace ServerModManager
             {
                 await GetFile(overview.GetPackageWithName(i), overview, val);
             }
+            //Check if file already exists
             if (!File.Exists("../sm_plugins/" + package.downloadLocation)) 
             {
                 using (WebClient client = new WebClient())
@@ -39,11 +39,12 @@ namespace ServerModManager
             }
         }
 
+        //This is the way commands should be set up. 1st func loops over packages and triggers 2nd for each. 1st is public, 2nd is private.
         public static void InstallPackages(Validator val, PackageOverview overview)
         {
             foreach (string i in val.packageNames)
             {
-                //Makes it look nice
+                //If it exists, install
                 Package info = overview.GetPackageWithName(i);
                 if (info != null)
                 {

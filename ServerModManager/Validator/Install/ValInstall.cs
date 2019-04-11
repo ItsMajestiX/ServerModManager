@@ -6,6 +6,7 @@ namespace ServerModManager
 {
     partial class Validator
     {
+        //Called on scpman install
         private void ValInstall(string[] args, bool help, int len)
         {
             //ensure we have a package name

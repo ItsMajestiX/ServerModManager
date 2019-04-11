@@ -9,6 +9,7 @@ namespace ServerModManager
     {
         private static void Remove(Package package, Validator val)
         {
+            //Check if it exists.
             if (File.Exists("../sm_plugins/" + package.downloadLocation))
             {
                 Console.WriteLine("Removing package " + package.name);
@@ -27,6 +28,7 @@ namespace ServerModManager
                 Console.WriteLine("WARNING: You have not installed " + package.name + ", skipping.");
             }
         }
+        //Design standard
         public static void RemovePackages(Validator val, PackageOverview overview)
         {
             foreach (string i in val.packageNames)
