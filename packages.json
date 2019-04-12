@@ -25,6 +25,14 @@
       "downloadLocation": "AdminToolbox.dll"
     },
     {
+      "name": "assemblycs",
+      "author": "Smod2 Team",
+      "version": "3.4.0",
+      "dependencies": [],
+      "downloadLink": "https://github.com/Grover-c13/Smod2/releases/download/3.4.0/Assembly-CSharp.dll",
+      "downloadLocation": "../SCPSL_Data/Managed/Assembly-CSharp.dll"
+    },
+    {
       "name": "atautoupdate",
       "author": "Rnen",
       "version": "N/A",
@@ -210,6 +218,14 @@
       "downloadLocation": "MOTD.dll"
     },
     {
+      "name": "multiadmin",
+      "author": "SMod Team",
+      "version": "3.1.2",
+      "dependencies": [],
+      "downloadLink": "https://github.com/Grover-c13/MultiAdmin/releases/download/3.1.2/MultiAdmin.exe",
+      "downloadLocation": "../MultiAdmin.exe"
+    },
+    {
       "name": "patreonplugin",
       "author": "Dankrushen",
       "version": "v1.9",
@@ -272,6 +288,14 @@
       "dependencies": [],
       "downloadLink": "https://github.com/Cyanox62/SerpentsHand/releases/download/0.7/SerpentsHand.dll",
       "downloadLocation": "SerpentsHand.dll"
+    },
+    {
+      "name": "smod2",
+      "author": "SMod Team",
+      "version": "3.4.0",
+      "dependencies": ["assemblycs"],
+      "downloadLink": "https://github.com/Grover-c13/Smod2/releases/download/3.4.0/Smod2.dll",
+      "downloadLocation": "../SCPSL_Data/Managed/Smod2.dll"
     },
     {
       "name": "speedrun",
