@@ -23,10 +23,10 @@
 <h1 id="to-do">To Do</h1>
 <ul>
 <li>Futureproof JSON</li>
-<li>Force update command</li>
 <li>Install from file of requirements</li>
-<li>Depreciate Validator.pluginsExist and Validator.dependenciesExist</li>
 <li>Add incompatibilities</li>
+<li>Fix bug where download finishes before loading bar displays</li>
+<li>Follow ERROR, WARNING, and INFO conventions more strictly</li>
 </ul>
 <h1 id="for-modders">For Modders</h1>
 <p>Get your mod added to the list! Either send me an email at <a href="mailto:smmsubmissions@smmsubmissions.33mail.com">smmsubmissions@smmsubmissions.33mail.com</a> or DM me on discord at MajestiX#7652.</p>
