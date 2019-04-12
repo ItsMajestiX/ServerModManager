@@ -41,6 +41,14 @@
       "downloadLocation": "AT_AutoUpdate.bat"
     },
     {
+      "name": "attgplugin", 
+      "author": "ALLTHETIMEGAMING", 
+      "version": "1.10", 
+      "dependencies": [], 
+      "downloadLink": "https://github.com/ALLTHETIMEGAMING/ATTG-Plugin/releases/download/1.10/ATTG_Command.dll", 
+      "downloadLocation": "ATTG_Command.dll"
+    },
+    {
       "name": "betteradmin", 
       "author": "PhoenProject", 
       "version": "1.1.1", 
