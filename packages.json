@@ -1,12 +1,13 @@
 {
   "packages": [
     {
-      "name": "914customrecipes",
       "author": "storm37000",
-      "version": "1.0.5",
       "dependencies": [],
       "downloadLink": "https://github.com/storm37000/SCPSL_Smod_914_custom_recipes/releases/download/1.0.5/custom914recip.dll",
-      "downloadLocation": "custom914recip.dll"
+      "downloadLocation": "custom914recip.dll",
+      "incompatibilities": [],
+      "name": "914customrecipes",
+      "version": "1.0.5"
     },
     {
       "name": "914helditems",
@@ -14,7 +15,8 @@
       "version": "1.0.9",
       "dependencies": [],
       "downloadLink": "https://github.com/storm37000/SCPSL_Smod_914_held_items/releases/download/1.0.9/914inhand.dll",
-      "downloadLocation": "914inhand.dll"
+      "downloadLocation": "914inhand.dll",
+      "incompatibilities": []
     },
     {
       "name": "admintoolbox",
@@ -22,7 +24,8 @@
       "version": "1.3.8",
       "dependencies": [ "atautoupdate" ],
       "downloadLink": "https://github.com/Rnen/AdminToolbox/releases/download/1.3.8/AdminToolbox.dll",
-      "downloadLocation": "AdminToolbox.dll"
+      "downloadLocation": "AdminToolbox.dll",
+      "incompatibilities": []
     },
     {
       "name": "assemblycs",
@@ -30,7 +33,8 @@
       "version": "3.4.0",
       "dependencies": [],
       "downloadLink": "https://github.com/Grover-c13/Smod2/releases/download/3.4.0/Assembly-CSharp.dll",
-      "downloadLocation": "../SCPSL_Data/Managed/Assembly-CSharp.dll"
+      "downloadLocation": "../SCPSL_Data/Managed/Assembly-CSharp.dll",
+      "incompatibilities": []
     },
     {
       "name": "atautoupdate",
@@ -38,23 +42,26 @@
       "version": "N/A",
       "dependencies": [],
       "downloadLink": "https://github.com/Rnen/AdminToolbox/releases/download/1.3.8/AT_AutoUpdate.bat",
-      "downloadLocation": "AT_AutoUpdate.bat"
+      "downloadLocation": "AT_AutoUpdate.bat",
+      "incompatibilities": []
     },
     {
-      "name": "attgplugin", 
-      "author": "ALLTHETIMEGAMING", 
-      "version": "1.10", 
-      "dependencies": [], 
-      "downloadLink": "https://github.com/ALLTHETIMEGAMING/ATTG-Plugin/releases/download/1.10/ATTG_Command.dll", 
-      "downloadLocation": "ATTG_Command.dll"
+      "name": "attgplugin",
+      "author": "ALLTHETIMEGAMING",
+      "version": "1.10",
+      "dependencies": [],
+      "downloadLink": "https://github.com/ALLTHETIMEGAMING/ATTG-Plugin/releases/download/1.10/ATTG_Command.dll",
+      "downloadLocation": "ATTG_Command.dll",
+      "incompatibilities": []
     },
     {
-      "name": "betteradmin", 
-      "author": "PhoenProject", 
-      "version": "1.1.1", 
-      "dependencies": [], 
-      "downloadLink": "https://github.com/PhoenProject/BetterAdmin/releases/download/1.1.1/BetterAdmin.dll", 
-      "downloadLocation": "BetterAdmin.dll"
+      "name": "betteradmin",
+      "author": "PhoenProject",
+      "version": "1.1.1",
+      "dependencies": [],
+      "downloadLink": "https://github.com/PhoenProject/BetterAdmin/releases/download/1.1.1/BetterAdmin.dll",
+      "downloadLocation": "BetterAdmin.dll",
+      "incompatibilities": []
     },
     {
       "name": "betterdisarming",
@@ -62,7 +69,8 @@
       "version": "0.7",
       "dependencies": [],
       "downloadLink": "https://github.com/Cyanox62/BetterDisarming/releases/download/0.7/BetterDisarming.dll",
-      "downloadLocation": "BetterDisarming.dll"
+      "downloadLocation": "BetterDisarming.dll",
+      "incompatibilities": []
     },
     {
       "name": "blackout",
@@ -70,7 +78,8 @@
       "version": "v1.1.2",
       "dependencies": [],
       "downloadLink": "https://github.com/probe4aiur/Blackout/releases/download/v1.1.2/Blackout.dll",
-      "downloadLocation": "Blackout.dll"
+      "downloadLocation": "Blackout.dll",
+      "incompatibilities": []
     },
     {
       "name": "customannouncements",
@@ -78,7 +87,8 @@
       "version": "1.7",
       "dependencies": [],
       "downloadLink": "https://github.com/Cyanox62/CustomAnnouncements/releases/download/1.7/CustomAnnouncements.dll",
-      "downloadLocation": "CustomAnnouncements.dll"
+      "downloadLocation": "CustomAnnouncements.dll",
+      "incompatibilities": []
     },
     {
       "name": "custombroadcasts",
@@ -86,7 +96,8 @@
       "version": "N/A",
       "dependencies": [],
       "downloadLink": "https://cdn.discordapp.com/attachments/561203137281785876/561325742961721385/CustomBroadcasts.dll",
-      "downloadLocation": "CustomBroadcasts.dll"
+      "downloadLocation": "CustomBroadcasts.dll",
+      "incompatibilities": []
     },
     {
       "name": "customdooraccess",
@@ -94,8 +105,8 @@
       "version": "1.3.3",
       "dependencies": [],
       "downloadLink": "https://github.com/Faeety/CustomDoorAccess/releases/download/1.3.3/CustomDoorAccess.dll",
-      "downloadLocation": "CustomDoorAccess.dll"
-
+      "downloadLocation": "CustomDoorAccess.dll",
+      "incompatibilities": []
     },
     {
       "name": "customrespawns",
@@ -103,7 +114,8 @@
       "version": "N/A",
       "dependencies": [],
       "downloadLink": "https://cdn.discordapp.com/attachments/461569389292945419/526477498767114243/CustomRespawns.dll",
-      "downloadLocation": "CustomRespawns.dll"
+      "downloadLocation": "CustomRespawns.dll",
+      "incompatibilities": []
     },
     {
       "name": "deathnade",
@@ -111,7 +123,8 @@
       "version": "N/A",
       "dependencies": [],
       "downloadLink": "https://gitlab.com/4aiur/DeathNade/-/jobs/167430591/artifacts/file/DeathNade.dll",
-      "downloadLocation": "DeathNade.dll"
+      "downloadLocation": "DeathNade.dll",
+      "incompatibilities": []
     },
     {
       "name": "defaultammo",
@@ -119,15 +132,17 @@
       "version": "1.0.5",
       "dependencies": [],
       "downloadLink": "https://github.com/storm37000/SCPSL_Smod_DefaultAmmo/releases/download/1.0.5/DefaultAmmo.dll",
-      "downloadLocation": "DefaultAmmo.dll"
+      "downloadLocation": "DefaultAmmo.dll",
+      "incompatibilities": []
     },
     {
-      "name": "disconnectdrop", 
-      "author": "NeonWizard", 
-      "version": "v1.7.0", 
-      "dependencies": [], 
-      "downloadLink": "https://github.com/NeonWizard/SCP-DisconnectDrop/releases/download/v1.7.0/DisconnectDrop.dll", 
-      "downloadLocation": "DisconnectDrop.dll"
+      "name": "disconnectdrop",
+      "author": "NeonWizard",
+      "version": "v1.7.0",
+      "dependencies": [],
+      "downloadLink": "https://github.com/NeonWizard/SCP-DisconnectDrop/releases/download/v1.7.0/DisconnectDrop.dll",
+      "downloadLocation": "DisconnectDrop.dll",
+      "incompatibilities": []
     },
     {
       "name": "donortag",
@@ -135,7 +150,8 @@
       "version": "4.1",
       "dependencies": [],
       "downloadLink": "https://github.com/PatPeter/SCPSL-Donator-Tag/releases/download/4.1/DonorTag.dll",
-      "downloadLocation": "DonorTag.dll"
+      "downloadLocation": "DonorTag.dll",
+      "incompatibilities": []
     },
     {
       "name": "endconditions",
@@ -143,7 +159,8 @@
       "version": "N/A",
       "dependencies": [],
       "downloadLink": "https://cdn.discordapp.com/attachments/473211249799200771/526477575695106069/EndConditions.dll",
-      "downloadLocation": "EndConditions.dll"
+      "downloadLocation": "EndConditions.dll",
+      "incompatibilities": []
     },
     {
       "name": "friendlyfireautoban",
@@ -151,7 +168,8 @@
       "version": "3.0.3",
       "dependencies": [],
       "downloadLink": "https://github.com/PatPeter/FriendlyFireAutoban/releases/download/3.0.3/FriendlyFireAutoban.dll",
-      "downloadLocation": "FriendlyFireAutoban.dll"
+      "downloadLocation": "FriendlyFireAutoban.dll",
+      "incompatibilities": []
     },
     {
       "name": "georestrictionsdata",
@@ -159,7 +177,8 @@
       "version": "N/A",
       "dependencies": [],
       "downloadLink": "https://github.com/Aquazus/GeoRestrictions/releases/download/1.0.1/geoip.dat",
-      "downloadLocation": "../geoip.dat"
+      "downloadLocation": "../geoip.dat",
+      "incompatibilities": []
     },
     {
       "name": "georestrictions",
@@ -167,31 +186,35 @@
       "version": "1.0.1",
       "dependencies": [ "georestrictionsdata" ],
       "downloadLink": "https://github.com/Aquazus/GeoRestrictions/releases/download/1.0.1/GeoRestrictions.dll",
-      "downloadLocation": "GeoRestrictions.dll"
+      "downloadLocation": "GeoRestrictions.dll",
+      "incompatibilities": []
     },
     {
-      "name": "hmd", 
-      "author": "probe4aiur", 
-      "version": "v1.0.1", 
-      "dependencies": ["itemmanager"], 
-      "downloadLink": "https://github.com/probe4aiur/HMD/releases/download/v1.0.1/HMD.dll", 
-      "downloadLocation": "HMD.dll"
-    },
-    {
-      "name": "hs8", 
+      "name": "hmd",
       "author": "probe4aiur",
-      "version": "v1.1.1", 
-      "dependencies": ["itemmanager"], 
-      "downloadLink": "https://github.com/probe4aiur/HS8/releases/download/v1.1.1/HS8.dll", 
-      "downloadLocation": "HS8.dll"
+      "version": "v1.0.1",
+      "dependencies": [ "itemmanager" ],
+      "downloadLink": "https://github.com/probe4aiur/HMD/releases/download/v1.0.1/HMD.dll",
+      "downloadLocation": "HMD.dll",
+      "incompatibilities": []
     },
     {
-      "name": "itemmanager", 
-      "author": "probe4aiur", 
-      "version": "v1.0.3", 
-      "dependencies": [], 
-      "downloadLink": "https://github.com/probe4aiur/ItemManager/releases/download/v1.0.3/ItemManager.dll", 
-      "downloadLocation": "ItemManager.dll"
+      "name": "hs8",
+      "author": "probe4aiur",
+      "version": "v1.1.1",
+      "dependencies": [ "itemmanager" ],
+      "downloadLink": "https://github.com/probe4aiur/HS8/releases/download/v1.1.1/HS8.dll",
+      "downloadLocation": "HS8.dll",
+      "incompatibilities": []
+    },
+    {
+      "name": "itemmanager",
+      "author": "probe4aiur",
+      "version": "v1.0.3",
+      "dependencies": [],
+      "downloadLink": "https://github.com/probe4aiur/ItemManager/releases/download/v1.0.3/ItemManager.dll",
+      "downloadLocation": "ItemManager.dll",
+      "incompatibilities": []
     },
     {
       "name": "laterjoin",
@@ -199,15 +222,17 @@
       "version": "1.1.15",
       "dependencies": [],
       "downloadLink": "https://github.com/storm37000/SCPSL_Smod_LaterJoin/releases/download/1.1.15/laterjoin.dll",
-      "downloadLocation": "laterjoin.dll"
+      "downloadLocation": "laterjoin.dll",
+      "incompatibilities": []
     },
     {
-      "name": "loadingscreen", 
+      "name": "loadingscreen",
       "author": "mattymatty97",
-      "version": "v1.2.0", 
-      "dependencies": [], 
-      "downloadLink": "https://github.com/mattymatty97/SCPSL_LoadingScreen/releases/download/v1.2.0/LoadingScreen.dll", 
-      "downloadLocation": "LoadingScreen.dll"
+      "version": "v1.2.0",
+      "dependencies": [],
+      "downloadLink": "https://github.com/mattymatty97/SCPSL_LoadingScreen/releases/download/v1.2.0/LoadingScreen.dll",
+      "downloadLocation": "LoadingScreen.dll",
+      "incompatibilities": []
     },
     {
       "name": "lone079",
@@ -215,7 +240,8 @@
       "version": "N/A",
       "dependencies": [],
       "downloadLink": "https://cdn.discordapp.com/attachments/531577105432182797/556780950001025055/Lone079.dll",
-      "downloadLocation": "Lone079.dll"
+      "downloadLocation": "Lone079.dll",
+      "incompatibilities": []
     },
     {
       "name": "motd",
@@ -223,7 +249,8 @@
       "version": "1.0.0",
       "dependencies": [],
       "downloadLink": "https://github.com/storm37000/SCPSL_Smod_MOTD/releases/download/1.0.0/MOTD.dll",
-      "downloadLocation": "MOTD.dll"
+      "downloadLocation": "MOTD.dll",
+      "incompatibilities": []
     },
     {
       "name": "multiadmin",
@@ -231,7 +258,8 @@
       "version": "3.1.2",
       "dependencies": [],
       "downloadLink": "https://github.com/Grover-c13/MultiAdmin/releases/download/3.1.2/MultiAdmin.exe",
-      "downloadLocation": "../MultiAdmin.exe"
+      "downloadLocation": "../MultiAdmin.exe",
+      "incompatibilities": []
     },
     {
       "name": "patreonplugin",
@@ -239,7 +267,8 @@
       "version": "v1.9",
       "dependencies": [],
       "downloadLink": "https://github.com/Dankrushen/PatreonPlugin/releases/download/v1.9/PatreonPlugin.dll",
-      "downloadLocation": "PatreonPlugin.dll"
+      "downloadLocation": "PatreonPlugin.dll",
+      "incompatibilities": []
     },
     {
       "name": "playerpreferences",
@@ -247,7 +276,8 @@
       "version": "v1.2.1",
       "dependencies": [],
       "downloadLink": "https://github.com/probe4aiur/PlayerPreferences/releases/download/v1.2.1/PlayerPreferences.dll",
-      "downloadLocation": "PlayerPreferences.dll"
+      "downloadLocation": "PlayerPreferences.dll",
+      "incompatibilities": []
     },
     {
       "name": "playerxp",
@@ -255,7 +285,8 @@
       "version": "1.0",
       "dependencies": [],
       "downloadLink": "https://github.com/Cyanox62/PlayerXP/releases/download/1.0/PlayerXP.dll",
-      "downloadLocation": "PlayerXP.dll"
+      "downloadLocation": "PlayerXP.dll",
+      "incompatibilities": []
     },
     {
       "name": "roleclass",
@@ -263,7 +294,8 @@
       "version": "v2.0.0",
       "dependencies": [],
       "downloadLink": "https://github.com/lordofkhaos/RoleClass-Smod2-Plugin/releases/download/v2.0.0/RoleClass.dll",
-      "downloadLocation": "RoleClass.dll"
+      "downloadLocation": "RoleClass.dll",
+      "incompatibilities": []
     },
     {
       "name": "scp343",
@@ -271,15 +303,17 @@
       "version": "1.3.8",
       "dependencies": [],
       "downloadLink": "https://github.com/MrMith/SCP-343/releases/download/1.3.8/SCP-343.dll",
-      "downloadLocation": "SCP-343.dll"
+      "downloadLocation": "SCP-343.dll",
+      "incompatibilities": []
     },
     {
-      "name": "scp575", 
-      "author": "galaxy119", 
-      "version": "2.5.0", 
-      "dependencies": [], 
-      "downloadLink": "https://github.com/galaxy119/SCP-575/releases/download/2.5.0/SCP-575.dll", 
-      "downloadLocation": "SCP-575.dll"
+      "name": "scp575",
+      "author": "galaxy119",
+      "version": "2.5.0",
+      "dependencies": [],
+      "downloadLink": "https://github.com/galaxy119/SCP-575/releases/download/2.5.0/SCP-575.dll",
+      "downloadLocation": "SCP-575.dll",
+      "incompatibilities": []
     },
     {
       "name": "servernamevars",
@@ -287,7 +321,8 @@
       "version": "1.0.4",
       "dependencies": [],
       "downloadLink": "https://github.com/storm37000/SCPSL_Smod_ServerNameVars/releases/download/1.0.4/servernamevar.dll",
-      "downloadLocation": "servernamevar.dll"
+      "downloadLocation": "servernamevar.dll",
+      "incompatibilities": []
     },
     {
       "name": "serpentshand",
@@ -295,15 +330,17 @@
       "version": "0.7",
       "dependencies": [],
       "downloadLink": "https://github.com/Cyanox62/SerpentsHand/releases/download/0.7/SerpentsHand.dll",
-      "downloadLocation": "SerpentsHand.dll"
+      "downloadLocation": "SerpentsHand.dll",
+      "incompatibilities": []
     },
     {
       "name": "smod2",
       "author": "SMod Team",
       "version": "3.4.0",
-      "dependencies": ["assemblycs"],
+      "dependencies": [ "assemblycs" ],
       "downloadLink": "https://github.com/Grover-c13/Smod2/releases/download/3.4.0/Smod2.dll",
-      "downloadLocation": "../SCPSL_Data/Managed/Smod2.dll"
+      "downloadLocation": "../SCPSL_Data/Managed/Smod2.dll",
+      "incompatibilities": []
     },
     {
       "name": "speedrun",
@@ -311,7 +348,8 @@
       "version": "1.0.0-alpha",
       "dependencies": [],
       "downloadLink": "https://github.com/LewisTehMinerz/Speedrun/releases/download/1.0.0-alpha/Speedrun.dll",
-      "downloadLocation": "Speedrun.dll"
+      "downloadLocation": "Speedrun.dll",
+      "incompatibilities": []
     },
     {
       "name": "stayshut",
@@ -319,15 +357,17 @@
       "version": "1.0.10",
       "dependencies": [],
       "downloadLink": "https://github.com/storm37000/SCPSL_Smod_StayShut/releases/download/1.0.10/stayshut.dll",
-      "downloadLocation": "stayshut.dll"
+      "downloadLocation": "stayshut.dll",
+      "incompatibilities": []
     },
     {
-      "name": "tranquilizergun", 
-      "author": "NeonWizard", 
-      "version": "1.2.1", 
-      "dependencies": ["itemmanager"], 
-      "downloadLink": "https://github.com/NeonWizard/SCP-TranquilizerGun/releases/download/1.2.1/TranquilizerGun.dll", 
-      "downloadLocation": "TranquilizerGun.dll"
+      "name": "tranquilizergun",
+      "author": "NeonWizard",
+      "version": "1.2.1",
+      "dependencies": [ "itemmanager" ],
+      "downloadLink": "https://github.com/NeonWizard/SCP-TranquilizerGun/releases/download/1.2.1/TranquilizerGun.dll",
+      "downloadLocation": "TranquilizerGun.dll",
+      "incompatibilities": []
     },
     {
       "author": "KarlOfDuty",
@@ -335,7 +375,8 @@
       "downloadLink": "https://github.com/KarlOfDuty/VPNShield/releases/download/3.1.2/VPNShield.dll",
       "downloadLocation": "VPNShield.dll",
       "name": "vpnshield",
-      "version": "3.1.2"
+      "version": "3.1.2",
+      "incompatibilities": []
     }
   ]
 }
