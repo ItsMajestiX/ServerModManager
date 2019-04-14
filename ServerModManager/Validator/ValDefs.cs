@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 //Put all the variables in one place
 namespace ServerModManager
@@ -31,6 +29,8 @@ namespace ServerModManager
         //For commands that need package names
         public List<string> packageNames = new List<string> { };
 
+        //Remove command
+        public bool removeAll = false;
         //Update command
         public bool forceUpdate = false;
         public bool updateAll = false;

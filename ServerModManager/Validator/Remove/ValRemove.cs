@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ServerModManager
 {
@@ -20,12 +18,29 @@ namespace ServerModManager
                 if (!help)
                 {
                     //Fill out details
-                    opType = OP_TYPE.REMOVE;
-                    foreach (string i in args[1..args.Length])
+                    if (args[1] == "*")
                     {
-                        packageNames.Add(i);
+                        if (args.Length == 2)
+                        {
+                            removeAll = true;
+                            opType = OP_TYPE.REMOVE;
+                            success = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("ERROR: Usage scpman update *");
+                            opType = OP_TYPE.REMOVE_HELP;
+                        }
                     }
-                    success = true;
+                    else
+                    {
+                        foreach (string i in args[1..args.Length])
+                        {
+                            packageNames.Add(i);
+                        }
+                        opType = OP_TYPE.REMOVE;
+                        success = true;
+                    }
                 }
                 else
                 {

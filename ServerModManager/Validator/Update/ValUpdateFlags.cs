@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 //How we process flags. Might make this reusable in the future, but probably not.
 namespace ServerModManager

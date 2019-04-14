@@ -2,7 +2,7 @@
   "profiles": {
     "ServerModManager": {
       "commandName": "Project",
-      "commandLineArgs": "install hmd"
+      "commandLineArgs": "remove *"
     }
   }
 }

@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace ServerModManager
 {
@@ -31,16 +29,29 @@ namespace ServerModManager
         //Design standard
         public static void RemovePackages(Validator val, PackageOverview overview)
         {
-            foreach (string i in val.packageNames)
+            if (val.removeAll)
             {
-                Package current = overview.GetPackageWithName(i);
-                if (current != null)
+                foreach (Package i in overview.packages)
                 {
-                    Remove(current, val);
+                    if (File.Exists("../sm_plugins/" + i.downloadLocation))
+                    {
+                        Remove(i, val);
+                    }
                 }
-                else
+            }
+            else
+            {
+                foreach (string i in val.packageNames)
                 {
-                    Console.WriteLine("WARNING: No package with name " + i + ".");
+                    Package current = overview.GetPackageWithName(i);
+                    if (current != null)
+                    {
+                        Remove(current, val);
+                    }
+                    else
+                    {
+                        Console.WriteLine("WARNING: No package with name " + i + ".");
+                    }
                 }
             }
         }

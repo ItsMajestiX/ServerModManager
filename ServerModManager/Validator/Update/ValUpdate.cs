@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 //This is a nightmare, but it somehow works.
 namespace ServerModManager

@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 
 //Fun fact: I must have been high or somthing when I made this. It used to be named FileCompare.cs . ??????? That goes to the class that actually compares files.
 namespace ServerModManager

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ServerModManager
 {
@@ -25,7 +23,8 @@ namespace ServerModManager
         public static void RemoveHelp()
         {
             Console.WriteLine("USAGE: \n" + 
-                "scpman remove packagename [packagename2 packagename3]: Removes package packagename and optionally others listed.");
+                "scpman remove packagename [packagename2 packagename3]: Removes package packagename and optionally others listed.\n" +
+                "scpman remove *: Removes all packages installed.");
         }
 
         public static void UpdateHelp()
