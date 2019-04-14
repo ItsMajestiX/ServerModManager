@@ -27,6 +27,7 @@
 <li>Add incompatibilities</li>
 <li>Fix bug where download finishes before loading bar displays</li>
 <li>Follow ERROR, WARNING, and INFO conventions more strictly</li>
+<li>Make updater script</li>
 </ul>
 <h1 id="for-modders">For Modders</h1>
 <p>Get your mod added to the list! Either send me an email at <a href="mailto:smmsubmissions@smmsubmissions.33mail.com">smmsubmissions@smmsubmissions.33mail.com</a> or DM me on discord at MajestiX#7652.</p>
