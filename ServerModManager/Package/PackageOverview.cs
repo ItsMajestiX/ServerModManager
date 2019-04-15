@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -44,16 +45,22 @@ namespace ServerModManager
             return null;
         }
 
-        public Package GetPackageWithPath(string path)
+        public bool DoesPackageExist(Package package)
         {
-            foreach (Package i in packages)
+            if (File.Exists("../sm_plugins/" + package.downloadLocation))
             {
-                if (i.downloadLocation == path)
-                {
-                    return i;
-                }
+                return true;
             }
-            return null;
+            return false;
+        }
+
+        public bool DoesPackageExist(String name)
+        {
+            if (File.Exists("../sm_plugins/" + GetPackageWithName(name).downloadLocation))
+            {
+                return true;
+            }
+            return false;
         }
 
         //So the main method doesn't have to use async and to catch errors.

@@ -15,27 +15,40 @@ namespace ServerModManager
             {
                 await GetFile(overview.GetPackageWithName(i), overview, val);
             }
-            //Check if file already exists
-            if (!File.Exists("../sm_plugins/" + package.downloadLocation)) 
+            //Check if any incompatible package are installed
+            bool incompat = false;
+            foreach (string i in package.incompatibilities)
             {
-                using (WebClient client = new WebClient())
+                if (overview.DoesPackageExist(i))
                 {
-                    //Setup loading bar
-                    client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(LoadingBar.DownloadProgressCallback);
-                    //Download file to directory after checking if the folders exist
-                    if (Directory.Exists(Path.GetDirectoryName("../sm_plugins/" + package.downloadLocation)))
-                    {
-                        await client.DownloadFileTaskAsync(package.downloadLink, "../sm_plugins/" + package.downloadLocation);
-                    }
-                    else
-                    {
-                        Console.WriteLine("ERROR: The folder to install to does not exist. Did you unzip all the app files into a folder at the same level as sm_plugins?");
-                    }
+                    Console.WriteLine("WARNING: " + package.name + " is incompatiable with " + i + ", skipping.");
+                    incompat = true;
                 }
             }
-            else
+            if (!incompat)
             {
-                Console.WriteLine("WARNING: Plugin " + package.name + " is already installed, skipping.");
+                //Check if file already exists
+                if (!overview.DoesPackageExist(package))
+                {
+                    using (WebClient client = new WebClient())
+                    {
+                        //Setup loading bar
+                        client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(LoadingBar.DownloadProgressCallback);
+                        //Download file to directory after checking if the folders exist
+                        if (Directory.Exists(Path.GetDirectoryName("../sm_plugins/" + package.downloadLocation)))
+                        {
+                            await client.DownloadFileTaskAsync(package.downloadLink, "../sm_plugins/" + package.downloadLocation);
+                        }
+                        else
+                        {
+                            Console.WriteLine("ERROR: The folder to install to does not exist. Did you unzip all the app files into a folder at the same level as sm_plugins?");
+                        }
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("WARNING: Plugin " + package.name + " is already installed, skipping.");
+                }
             }
         }
 
