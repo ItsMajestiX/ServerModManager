@@ -6,14 +6,14 @@ namespace ServerModManager
 {
     class Updater
     {
-        public static void Update(Package package, Validator val)
+        public static void Update(Package package, Validator val, PackageOverview overview)
         {
             //Create tmp dir so files are gone after execution.
             using (TmpDir dir = new TmpDir("."))
             using (WebClient client = new WebClient())
             {
                 //Check if it exists
-                if (File.Exists("../sm_plugins/" + package.downloadLocation))
+                if (overview.DoesPackageExist(package))
                 {
                     string filename = Path.GetFileName(package.downloadLocation);
                     Console.WriteLine("Getting newest version of package " + package.name);
@@ -48,7 +48,7 @@ namespace ServerModManager
                 {
                     if (File.Exists("../sm_plugins/" + i.downloadLocation))
                     {
-                        Update(i, val);
+                        Update(i, val, overview);
                     }
                 }
             }
@@ -59,7 +59,7 @@ namespace ServerModManager
                 {
                     if (overview.GetPackageWithName(i) != null)
                     {
-                        Update(overview.GetPackageWithName(i), val);
+                        Update(overview.GetPackageWithName(i), val, overview);
                     }
                     else
                     {

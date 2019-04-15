@@ -5,10 +5,10 @@ namespace ServerModManager
 {
     class Remover
     {
-        private static void Remove(Package package, Validator val)
+        private static void Remove(Package package, Validator val, PackageOverview overview)
         {
             //Check if it exists.
-            if (File.Exists("../sm_plugins/" + package.downloadLocation))
+            if (overview.DoesPackageExist(package))
             {
                 Console.WriteLine("Removing package " + package.name);
                 //Remove
@@ -33,9 +33,10 @@ namespace ServerModManager
             {
                 foreach (Package i in overview.packages)
                 {
-                    if (File.Exists("../sm_plugins/" + i.downloadLocation))
+                    //It's redundant, but prevents spamming errors.
+                    if (overview.DoesPackageExist(i))
                     {
-                        Remove(i, val);
+                        Remove(i, val, overview);
                     }
                 }
             }
@@ -46,7 +47,7 @@ namespace ServerModManager
                     Package current = overview.GetPackageWithName(i);
                     if (current != null)
                     {
-                        Remove(current, val);
+                        Remove(current, val, overview);
                     }
                     else
                     {
