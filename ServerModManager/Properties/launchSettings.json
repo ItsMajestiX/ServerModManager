@@ -2,7 +2,7 @@
   "profiles": {
     "ServerModManager": {
       "commandName": "Project",
-      "commandLineArgs": "remove *"
+      "commandLineArgs": "update smod2"
     }
   }
 }

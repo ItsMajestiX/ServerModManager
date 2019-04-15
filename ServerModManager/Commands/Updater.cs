@@ -13,7 +13,7 @@ namespace ServerModManager
             using (WebClient client = new WebClient())
             {
                 //Check if it exists
-                if (overview.DoesPackageExist(package))
+                if (PackageUtil.DoesPackageExist(package))
                 {
                     string filename = Path.GetFileName(package.downloadLocation);
                     Console.WriteLine("Getting newest version of package " + package.name);
@@ -46,7 +46,7 @@ namespace ServerModManager
             {
                 foreach (Package i in overview.packages)
                 {
-                    if (File.Exists("../sm_plugins/" + i.downloadLocation))
+                    if (PackageUtil.DoesPackageExist(i))
                     {
                         Update(i, val, overview);
                     }

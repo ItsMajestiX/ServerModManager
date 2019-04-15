@@ -19,7 +19,7 @@ namespace ServerModManager
             bool incompat = false;
             foreach (string i in package.incompatibilities)
             {
-                if (overview.DoesPackageExist(i))
+                if (PackageUtil.DoesPackageExist(overview.GetPackageWithName(i)))
                 {
                     Console.WriteLine("WARNING: " + package.name + " is incompatiable with " + i + ", skipping.");
                     incompat = true;
@@ -28,14 +28,14 @@ namespace ServerModManager
             if (!incompat)
             {
                 //Check if file already exists
-                if (!overview.DoesPackageExist(package))
+                if (!PackageUtil.DoesPackageExist(package))
                 {
                     using (WebClient client = new WebClient())
                     {
                         //Setup loading bar
                         client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(LoadingBar.DownloadProgressCallback);
                         //Download file to directory after checking if the folders exist
-                        if (Directory.Exists(Path.GetDirectoryName("../sm_plugins/" + package.downloadLocation)))
+                        if (PackageUtil.DoesDirectoryExist(package))
                         {
                             await client.DownloadFileTaskAsync(package.downloadLink, "../sm_plugins/" + package.downloadLocation);
                         }

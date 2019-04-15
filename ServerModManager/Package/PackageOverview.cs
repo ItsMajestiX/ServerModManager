@@ -45,24 +45,6 @@ namespace ServerModManager
             return null;
         }
 
-        public bool DoesPackageExist(Package package)
-        {
-            if (File.Exists("../sm_plugins/" + package.downloadLocation))
-            {
-                return true;
-            }
-            return false;
-        }
-
-        public bool DoesPackageExist(String name)
-        {
-            if (File.Exists("../sm_plugins/" + GetPackageWithName(name).downloadLocation))
-            {
-                return true;
-            }
-            return false;
-        }
-
         //So the main method doesn't have to use async and to catch errors.
         public bool GenPackages()
         {

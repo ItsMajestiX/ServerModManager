@@ -8,11 +8,11 @@ namespace ServerModManager
         private static void Remove(Package package, Validator val, PackageOverview overview)
         {
             //Check if it exists.
-            if (overview.DoesPackageExist(package))
+            if (PackageUtil.DoesPackageExist(package))
             {
                 Console.WriteLine("Removing package " + package.name);
                 //Remove
-                if (Directory.Exists(Path.GetDirectoryName("../sm_plugins/" + package.downloadLocation)))
+                if (PackageUtil.DoesDirectoryExist(package))
                 {
                     File.Delete("../sm_plugins/" + package.downloadLocation);
                 }
@@ -34,7 +34,7 @@ namespace ServerModManager
                 foreach (Package i in overview.packages)
                 {
                     //It's redundant, but prevents spamming errors.
-                    if (overview.DoesPackageExist(i))
+                    if (PackageUtil.DoesPackageExist(i))
                     {
                         Remove(i, val, overview);
                     }
