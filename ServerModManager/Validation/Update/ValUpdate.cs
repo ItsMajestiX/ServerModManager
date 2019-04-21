@@ -1,7 +1,7 @@
 ﻿using System;
 
 //This is a nightmare, but it somehow works.
-namespace ServerModManager
+namespace ServerModManager.Validation
 {
     partial class Validator
     {

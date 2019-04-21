@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace ServerModManager
+//How we process flags. Might make this reusable in the future, but probably not.
+namespace ServerModManager.Validation
 {
     partial class Validator
     {
-        private int InstallFlags(string[] args, int len)
+        private int UpdateFlags(string[] args, int len)
         {
             bool invalid = false;
             //Check if there are flags. No, it wont crash, thanks to short circuting.
@@ -31,9 +31,9 @@ namespace ServerModManager
                             //What flag are we using?
                             switch (i)
                             {
-                                case 'd':
-                                    flags.Add('d');
-                                    createDir = true;
+                                case 'f':
+                                    flags.Add('f');
+                                    forceUpdate = true;
                                     break;
                                 default:
                                     Console.WriteLine("ERROR: Invalid flag.");
@@ -44,7 +44,7 @@ namespace ServerModManager
                     }
                 }
                 //If flags invalid return -1. Else, increment search by 1
-                if (invalid)
+                if(invalid)
                 {
                     return -1;
                 }

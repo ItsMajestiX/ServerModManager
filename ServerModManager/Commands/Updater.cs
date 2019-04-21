@@ -2,7 +2,11 @@
 using System.IO;
 using System.Net;
 
-namespace ServerModManager
+using ServerModManager.PackageType;
+using ServerModManager.Util;
+using ServerModManager.Validation;
+
+namespace ServerModManager.Commands
 {
     class Updater
     {

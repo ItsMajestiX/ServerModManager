@@ -1,5 +1,10 @@
 ﻿using System;
 
+using ServerModManager.PackageType;
+using ServerModManager.Util;
+using ServerModManager.Validation;
+using ServerModManager.Commands;
+
 namespace ServerModManager
 {
     class Program

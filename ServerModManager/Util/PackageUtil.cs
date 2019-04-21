@@ -1,6 +1,7 @@
 ﻿using System.IO;
 
-namespace ServerModManager
+using ServerModManager.PackageType;
+namespace ServerModManager.Util
 {
     class PackageUtil
     {

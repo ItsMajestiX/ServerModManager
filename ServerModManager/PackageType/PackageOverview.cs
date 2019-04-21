@@ -5,7 +5,7 @@ using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 
-namespace ServerModManager
+namespace ServerModManager.PackageType
 {
     class PackageOverview
     {

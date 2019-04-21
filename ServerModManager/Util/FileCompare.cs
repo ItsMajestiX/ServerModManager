@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace ServerModManager
+namespace ServerModManager.Util
 {
     class FileCompare
     {

@@ -1,7 +1,11 @@
 ﻿using System;
 using System.IO;
 
-namespace ServerModManager
+using ServerModManager.PackageType;
+using ServerModManager.Util;
+using ServerModManager.Validation;
+
+namespace ServerModManager.Commands
 {
     class Remover
     {

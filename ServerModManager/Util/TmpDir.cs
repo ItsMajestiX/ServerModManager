@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 
 //Fun fact: I must have been high or somthing when I made this. It used to be named FileCompare.cs . ??????? That goes to the class that actually compares files.
-namespace ServerModManager
+namespace ServerModManager.Util
 {
     //Basically a folder that can be put in a using statment that is deleted when done, just like unix mktmp but cross platform.
     class TmpDir : IDisposable

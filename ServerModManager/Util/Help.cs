@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ServerModManager
+namespace ServerModManager.Util
 {
     class Help
     {
@@ -17,7 +17,9 @@ namespace ServerModManager
         public static void InstallHelp()
         {
             Console.WriteLine("USAGE: \n" +
-                "scpman install packagename [packagename2 packagename3]: Installs packages packagename and optionally others listed.");
+                "scpman install [-d] packagename [packagename2 packagename3]: Installs packages packagename and optionally others listed.\n" +
+                "FLAGS:\n" +
+                "-f: Creates missing directories.");
         }
 
         public static void RemoveHelp()

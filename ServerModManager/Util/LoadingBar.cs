@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace ServerModManager
+namespace ServerModManager.Util
 {
     class LoadingBar
     {

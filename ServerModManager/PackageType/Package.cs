@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ServerModManager
+namespace ServerModManager.PackageType
 {
     class Package
     {

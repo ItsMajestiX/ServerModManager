@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ServerModManager
+namespace ServerModManager.Validation
 {
     partial class Validator
     {
@@ -12,7 +12,7 @@ namespace ServerModManager
             if (len < 2 + flag)
             {
                 //Always display usage if used incorrectly
-                Console.WriteLine("ERROR: Usage scpman install packagename");
+                Console.WriteLine("ERROR: Usage scpman install [-d] packagename");
                 opType = OP_TYPE.INSTALL_HELP;
             }
             else

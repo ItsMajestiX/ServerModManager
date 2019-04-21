@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
 //Put all the variables in one place
-namespace ServerModManager
+namespace ServerModManager.Validation
 {
     partial class Validator
     {
