@@ -29,8 +29,12 @@ namespace ServerModManager
         //For commands that need package names
         public List<string> packageNames = new List<string> { };
 
+        //Install command
+        public bool createDir = false;
+
         //Remove command
         public bool removeAll = false;
+
         //Update command
         public bool forceUpdate = false;
         public bool updateAll = false;

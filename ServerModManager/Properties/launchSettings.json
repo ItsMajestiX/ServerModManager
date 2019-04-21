@@ -2,7 +2,7 @@
   "profiles": {
     "ServerModManager": {
       "commandName": "Project",
-      "commandLineArgs": "update smod2"
+      "commandLineArgs": "install -d smod2"
     }
   }
 }

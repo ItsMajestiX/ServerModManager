@@ -7,8 +7,9 @@ namespace ServerModManager
         //Called on scpman install
         private void ValInstall(string[] args, bool help, int len)
         {
+            int flag = InstallFlags(args, len);
             //ensure we have a package name
-            if (len < 2)
+            if (len < 2 + flag)
             {
                 //Always display usage if used incorrectly
                 Console.WriteLine("ERROR: Usage scpman install packagename");
@@ -20,7 +21,7 @@ namespace ServerModManager
                 if (!help)
                 {
                     opType = OP_TYPE.INSTALL;
-                    foreach (string i in args[1..args.Length])
+                    foreach (string i in args[1 + flag..len])
                     {
                         packageNames.Add(i);
                     }

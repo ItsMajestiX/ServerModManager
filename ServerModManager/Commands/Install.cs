@@ -41,7 +41,15 @@ namespace ServerModManager
                         }
                         else
                         {
-                            Console.WriteLine("ERROR: The folder to install to does not exist. Did you unzip all the app files into a folder at the same level as sm_plugins?");
+                            if (val.createDir)
+                            {
+                                Directory.CreateDirectory(Path.GetDirectoryName("../sm_plugins/" + package.downloadLocation));
+                                await client.DownloadFileTaskAsync(package.downloadLink, "../sm_plugins/" + package.downloadLocation);
+                            }
+                            else
+                            {
+                                Console.WriteLine("ERROR: The folder to install to does not exist. Did you unzip all the app files into a folder at the same level as sm_plugins?");
+                            }
                         }
                     }
                 }
