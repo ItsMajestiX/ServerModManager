@@ -2,7 +2,7 @@
   "profiles": {
     "ServerModManager": {
       "commandName": "Project",
-      "commandLineArgs": "install -d smod2"
+      "commandLineArgs": "install 914customrecipes"
     }
   }
 }

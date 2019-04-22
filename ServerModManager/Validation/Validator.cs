@@ -5,6 +5,7 @@ using System.Linq;
 //Must have made this at the same time I made TmpDir.cs
 namespace ServerModManager.Validation
 {
+    [Serializable]
     partial class Validator
     {
         public Validator(string[] args)

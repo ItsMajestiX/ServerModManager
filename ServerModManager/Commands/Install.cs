@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
@@ -25,8 +26,17 @@ namespace ServerModManager.Commands
             {
                 if (PackageUtil.DoesPackageExist(overview.GetPackageWithName(i)))
                 {
-                    Console.WriteLine("WARNING: " + package.name + " is incompatiable with " + i + ", skipping.");
-                    incompat = true;
+                    bool res = Dialog.YNDialog("WARNING: " + package.name + " is incompatiable with " + i + ". Would you like to remove the other package (Yes/No)? ");
+                    if (res)
+                    {
+                        Validator newVal = ClassCopy.DeepCopy(val);
+                        newVal.packageNames = new List<string> { i };
+                        Remover.RemovePackages(newVal, overview);
+                    }
+                    else
+                    {
+                        incompat = true;
+                    }
                 }
             }
             if (!incompat)
