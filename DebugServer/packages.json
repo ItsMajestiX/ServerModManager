@@ -48,9 +48,9 @@
     {
       "name": "attgplugin",
       "author": "ALLTHETIMEGAMING",
-      "version": "1.10",
+      "version": "1.5.0",
       "dependencies": [],
-      "downloadLink": "https://github.com/ALLTHETIMEGAMING/ATTG-Plugin/releases/download/1.10/ATTG_Command.dll",
+      "downloadLink": "https://github.com/ALLTHETIMEGAMING/ATTG-Plugin/releases/download/1.5.0/ATTG_Command.dll",
       "downloadLocation": "ATTG_Command.dll",
       "incompatibilities": []
     },
@@ -165,9 +165,9 @@
     {
       "name": "friendlyfireautoban",
       "author": "PatPeter",
-      "version": "3.0.3",
+      "version": "4.0.0",
       "dependencies": [],
-      "downloadLink": "https://github.com/PatPeter/FriendlyFireAutoban/releases/download/3.0.3/FriendlyFireAutoban.dll",
+      "downloadLink": "https://github.com/PatPeter/FriendlyFireAutoban/releases/download/4.0.0/FriendlyFireAutoban.dll",
       "downloadLocation": "FriendlyFireAutoban.dll",
       "incompatibilities": []
     },
@@ -219,9 +219,9 @@
     {
       "name": "laterjoin",
       "author": "storm37000",
-      "version": "1.1.15",
+      "version": "1.1.16",
       "dependencies": [],
-      "downloadLink": "https://github.com/storm37000/SCPSL_Smod_LaterJoin/releases/download/1.1.15/laterjoin.dll",
+      "downloadLink": "https://github.com/storm37000/SCPSL_Smod_LaterJoin/releases/download/1.1.16/laterjoin.dll",
       "downloadLocation": "laterjoin.dll",
       "incompatibilities": []
     },
@@ -300,18 +300,18 @@
     {
       "name": "scp343",
       "author": "MrMith",
-      "version": "1.3.8",
+      "version": "1.4.3",
       "dependencies": [],
-      "downloadLink": "https://github.com/MrMith/SCP-343/releases/download/1.3.8/SCP-343.dll",
+      "downloadLink": "https://github.com/MrMith/SCP-343/releases/download/1.4.3/SCP-343.dll",
       "downloadLocation": "SCP-343.dll",
       "incompatibilities": []
     },
     {
       "name": "scp575",
       "author": "galaxy119",
-      "version": "2.5.0",
+      "version": "2.5.1",
       "dependencies": [],
-      "downloadLink": "https://github.com/galaxy119/SCP-575/releases/download/2.5.0/SCP-575.dll",
+      "downloadLink": "https://github.com/galaxy119/SCP-575/releases/download/2.5.1/SCP-575.dll",
       "downloadLocation": "SCP-575.dll",
       "incompatibilities": []
     },
@@ -372,10 +372,10 @@
     {
       "author": "KarlOfDuty",
       "dependencies": [],
-      "downloadLink": "https://github.com/KarlOfDuty/VPNShield/releases/download/3.1.2/VPNShield.dll",
+      "downloadLink": "https://github.com/KarlOfDuty/VPNShield/releases/download/3.2.0/VPNShield.dll",
       "downloadLocation": "VPNShield.dll",
       "name": "vpnshield",
-      "version": "3.1.2",
+      "version": "3.2.0",
       "incompatibilities": []
     }
   ]
