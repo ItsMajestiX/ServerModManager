@@ -20,7 +20,8 @@ namespace ServerModManager.Util
         }
 
         //Basic recursive file remover.
-        private void CleanDirRecursive(string root)
+        //Public for use as a utility function
+        public static void CleanDirRecursive(string root)
         {
             foreach (string i in Directory.EnumerateFiles(root))
             {
