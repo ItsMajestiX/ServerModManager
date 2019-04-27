@@ -10,7 +10,7 @@ namespace ServerModManager.Commands
 {
     class Server
     {
-        public async static void CreateServerWin(Validator val)
+        public async static void CreateServerWin()
         {
             if (!File.Exists("../steamcmd/steamcmd.exe"))
             {
@@ -34,11 +34,18 @@ namespace ServerModManager.Commands
                 }
             }
         }
+
         public static void CreateServer(Validator val)
         {
-            if (val.os == Validator.OS_TYPE.WINDOWS)
+            //Determine windows or linux, and go from there
+            OperatingSystem osInfo = Environment.OSVersion;
+            if (osInfo.Platform == PlatformID.Win32NT)
             {
-
+                CreateServerWin();
+            }
+            else
+            {
+                Console.WriteLine("ERROR: Only windows is supported at this time. For install instructions, please see https://github.com/Grover-c13/Smod2/wiki/ServerMod-Installation-(Linux)")
             }
         }
     }

@@ -18,13 +18,6 @@ namespace ServerModManager.Validation
             UPDATE_HELP = -3
         }
 
-        public enum OS_TYPE
-        {
-            WINDOWS = 0,
-            UBUNTU = 1,
-            DEBIAN = 2
-        }
-
         //Define values that can be set by command
         public bool success = false;
         public OP_TYPE opType = OP_TYPE.INVALID;
