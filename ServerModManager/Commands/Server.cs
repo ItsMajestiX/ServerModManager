@@ -1,9 +1,10 @@
-﻿using System;
+﻿using ServerModManager.Validation;
+using ServerModManager.Util;
+
+using System;
 using System.IO;
 using System.IO.Compression;
-
-using ServerModManager.Validation;
-using ServerModManager.Util;
+using System.Diagnostics;
 using System.Net;
 
 namespace ServerModManager.Commands
@@ -33,6 +34,16 @@ namespace ServerModManager.Commands
                     ZipFile.ExtractToDirectory(dir.dirName + "steamcmd.zip", "../steamcmd/");
                 }
             }
+            using (Process process = new Process())
+            {
+                process.StartInfo.CreateNoWindow = true;
+                process.StartInfo.RedirectStandardError = true;
+                process.StartInfo.RedirectStandardInput = true;
+                process.StartInfo.RedirectStandardOutput = true;
+                process.StartInfo.FileName = "../steamcmd/steamcmd.exe";
+                process.StartInfo.Arguments = "steamcmd +login anonymous +force_install_dir \"../\" +app_update 786920 -beta beta validate +quit";
+                process.Start();
+            }
         }
 
         public static void CreateServer(Validator val)
@@ -45,7 +56,7 @@ namespace ServerModManager.Commands
             }
             else
             {
-                Console.WriteLine("ERROR: Only windows is supported at this time. For install instructions, please see https://github.com/Grover-c13/Smod2/wiki/ServerMod-Installation-(Linux)")
+                Console.WriteLine("ERROR: Only windows is supported at this time. For install instructions, please see https://github.com/Grover-c13/Smod2/wiki/ServerMod-Installation-(Linux)");
             }
         }
     }

@@ -38,8 +38,5 @@ namespace ServerModManager.Validation
         //Update command
         public bool forceUpdate = false;
         public bool updateAll = false;
-
-        //Server command
-        public OS_TYPE os;
     }
 }
