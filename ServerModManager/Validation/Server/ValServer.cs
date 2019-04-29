@@ -8,7 +8,7 @@ namespace ServerModManager.Validation
     {
         private void ValServer(string[] args, bool help, int len)
         {
-            if (len < 2)
+            if (len < 1)
             {
                 //Always display usage if used incorrectly
                 Console.WriteLine("ERROR: Usage scpman server");

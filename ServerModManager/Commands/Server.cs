@@ -6,12 +6,13 @@ using System.IO;
 using System.IO.Compression;
 using System.Diagnostics;
 using System.Net;
+using System.Threading.Tasks;
 
 namespace ServerModManager.Commands
 {
     class Server
     {
-        public async static void CreateServerWin()
+        public async static Task CreateServerWin()
         {
             if (!File.Exists("../steamcmd/steamcmd.exe"))
             {
@@ -36,13 +37,14 @@ namespace ServerModManager.Commands
             }
             using (Process process = new Process())
             {
-                process.StartInfo.CreateNoWindow = true;
-                process.StartInfo.RedirectStandardError = true;
-                process.StartInfo.RedirectStandardInput = true;
-                process.StartInfo.RedirectStandardOutput = true;
+                process.StartInfo.CreateNoWindow = false;
+                process.StartInfo.RedirectStandardError = false;
+                process.StartInfo.RedirectStandardInput = false;
+                process.StartInfo.RedirectStandardOutput = false;
                 process.StartInfo.FileName = "../steamcmd/steamcmd.exe";
-                process.StartInfo.Arguments = "steamcmd +login anonymous +force_install_dir \"../\" +app_update 786920 -beta beta validate +quit";
+                process.StartInfo.Arguments = "+login anonymous +force_install_dir \"../\" +app_update 786920 -beta beta validate +quit";
                 process.Start();
+                process.WaitForExit();
             }
         }
 
@@ -52,7 +54,7 @@ namespace ServerModManager.Commands
             OperatingSystem osInfo = Environment.OSVersion;
             if (osInfo.Platform == PlatformID.Win32NT)
             {
-                CreateServerWin();
+                CreateServerWin().Wait();
             }
             else
             {
