@@ -30,6 +30,7 @@ namespace ServerModManager.Validation
                 else
                 {
                     opType = OP_TYPE.INSTALL_HELP;
+                    success = true;
                 }
             }
         }

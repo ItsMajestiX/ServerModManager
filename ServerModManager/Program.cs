@@ -43,6 +43,12 @@ namespace ServerModManager
                         case Validator.OP_TYPE.UPDATE_HELP:
                             Help.UpdateHelp();
                             break;
+                        case Validator.OP_TYPE.SERVER:
+                            Server.CreateServer(validator);
+                            break;
+                        case Validator.OP_TYPE.SERVER_HELP:
+                            Help.ServerHelp();
+                            break;
                         default:
                             Console.WriteLine("Unknown error");
                             break;
@@ -65,6 +71,9 @@ namespace ServerModManager
                         break;
                     case Validator.OP_TYPE.UPDATE_HELP:
                         Help.UpdateHelp();
+                        break;
+                    case Validator.OP_TYPE.SERVER_HELP:
+                        Help.ServerHelp();
                         break;
                     default:
                         Console.WriteLine("Unknown error");

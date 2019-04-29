@@ -52,6 +52,7 @@ namespace ServerModManager.Validation
                     else
                     {
                         opType = OP_TYPE.UPDATE_HELP;
+                        success = true;
                     }
                 }
             }

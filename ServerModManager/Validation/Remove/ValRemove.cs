@@ -45,6 +45,7 @@ namespace ServerModManager.Validation
                 else
                 {
                     opType = OP_TYPE.REMOVE_HELP;
+                    success = true;
                 }
             }
         }

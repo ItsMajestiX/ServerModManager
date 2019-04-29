@@ -37,5 +37,11 @@ namespace ServerModManager.Util
                 "FLAGS: \n" +
                 "f: Overwrites the old file with the new one even if they are the same.");
         }
+
+        public static void ServerHelp()
+        {
+            Console.WriteLine("USAGE: \n" +
+                "scpman server: Creates or updates a MultiAdmin + SMod2 server (windows only, sorry)");
+        }
     }
 }

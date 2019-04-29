@@ -15,7 +15,9 @@ namespace ServerModManager.Validation
             REMOVE = 2,
             REMOVE_HELP = -2,
             UPDATE = 3,
-            UPDATE_HELP = -3
+            UPDATE_HELP = -3,
+            SERVER = 4,
+            SERVER_HELP = -4
         }
 
         //Define values that can be set by command

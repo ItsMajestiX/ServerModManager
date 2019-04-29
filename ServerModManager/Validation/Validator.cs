@@ -61,6 +61,9 @@ namespace ServerModManager.Validation
                     case "update":
                         ValUpdate(args, help, len);
                         break;
+                    case "server":
+                        ValServer(args, help, len);
+                        break;
                     //invalid command
                     default:
                         Console.WriteLine("ERROR: Invalid command.");
