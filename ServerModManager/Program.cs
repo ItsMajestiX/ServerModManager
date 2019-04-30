@@ -11,13 +11,15 @@ namespace ServerModManager
     {
         static void Main(string[] args)
         {
+            string version = "0.3-alpha1";
+
             //Validate arguments passed to program
             Validator validator = new Validator(args);
             //Get the available packages
             if (validator.success)
             {
                 PackageOverview overview = new PackageOverview();
-                if (overview.GenPackages())
+                if (overview.GenPackages(version))
                 {
                     //What command are we running?
                     switch (validator.opType)

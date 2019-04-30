@@ -14,18 +14,29 @@ namespace ServerModManager.PackageType
         public List<Package> packages;
 
         //Download from server
-        private async Task<bool> GetPackages()
+        private async Task<bool> GetPackages(string ver)
         {
             using (WebClient client = new WebClient())
             {
                 //Get the loading bar ready
                 client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(LoadingBar.DownloadProgressCallback);
+                Task<string> location;
+                //Get repository from appropriate place
+                #if (DEBUG)
+                    location = client.DownloadStringTaskAsync("http://127.0.0.1:8000/versions.json");
+                #else
+                    location = client.DownloadStringTaskAsync("https://raw.githubusercontent.com/ItsMajestiX/ServerModManager/master/versions.json");
+                #endif
+                //Serialize to object
+                string locstr = await location;
+                Dictionary<string, string> locationDict = JsonConvert.DeserializeObject<Dictionary<string, string>>(locstr);
+                string fileLocation = locationDict[ver];
                 Task<string> json;
                 //Get repository from appropriate place
                 #if (DEBUG)
-                    json = client.DownloadStringTaskAsync("http://127.0.0.1:8000/packages.json");
+                    json = client.DownloadStringTaskAsync("http://127.0.0.1:8000/" + fileLocation);
                 #else
-                    json = client.DownloadStringTaskAsync("https://raw.githubusercontent.com/ItsMajestiX/ServerModManager/master/packages.json");
+                    json = client.DownloadStringTaskAsync("https://raw.githubusercontent.com/ItsMajestiX/ServerModManager/master/" + fileLocation);
                 #endif
                 //Serialize to object
                 string data = await json;
@@ -48,13 +59,13 @@ namespace ServerModManager.PackageType
         }
 
         //So the main method doesn't have to use async and to catch errors.
-        public bool GenPackages()
+        public bool GenPackages(string ver)
         {
             //Catch common exceptions
             try
             {
                 Console.WriteLine("Downloading package list.");
-                return GetPackages().Result;
+                return GetPackages(ver).Result;
             }
             catch (AggregateException e)
             {
