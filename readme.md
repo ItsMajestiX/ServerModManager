@@ -3,7 +3,7 @@
 
 ---
 
-<p><img src="https://dev.azure.com/ItsMajestiX/ServerModManager/_apis/build/status/ItsMajestiX.ServerModManager?branchName=master" alt="Build Status">](<a href="https://dev.azure.com/ItsMajestiX/ServerModManager/_build/latest?definitionId=1&amp;branchName=master">https://dev.azure.com/ItsMajestiX/ServerModManager/_build/latest?definitionId=1&amp;branchName=master</a>)</p>
+<p><a href="https://dev.azure.com/ItsMajestiX/ServerModManager/_build/latest?definitionId=1&amp;branchName=master"><img src="https://dev.azure.com/ItsMajestiX/ServerModManager/_apis/build/status/ItsMajestiX.ServerModManager?branchName=master" alt="Build Status"></a></p>
 <h1 id="servermodmanager">ServerModManager</h1>
 <p>A package manager for SCP: Secret Laboratory</p>
 <p><em>So apparently the official SMod team is working on something similar to this. When it releases, I’ll archive this and switch over to the official version. Until then, the project isn’t going anywhere.</em></p>
