@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
+using Pastel;
 
 namespace ServerModManager.Validation
 {
@@ -11,7 +11,7 @@ namespace ServerModManager.Validation
             if (len != 1)
             {
                 //Always display usage if used incorrectly
-                Console.WriteLine("ERROR: Usage scpman server");
+                Console.WriteLine("ERROR: Usage scpman server".Pastel("ff0000"));
                 opType = OP_TYPE.SERVER_HELP;
             }
             else

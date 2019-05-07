@@ -8,6 +8,8 @@ using System.Diagnostics;
 using System.Net;
 using System.Threading.Tasks;
 
+using Pastel;
+
 namespace ServerModManager.Commands
 {
     class Server
@@ -58,7 +60,7 @@ namespace ServerModManager.Commands
             }
             else
             {
-                Console.WriteLine("ERROR: Only windows is supported at this time. For install instructions, please see https://github.com/Grover-c13/Smod2/wiki/ServerMod-Installation-(Linux)");
+                Console.WriteLine("ERROR: Only windows is supported at this time. For install instructions, please see https://github.com/Grover-c13/Smod2/wiki/ServerMod-Installation-(Linux)".Pastel("ff0000"));
             }
         }
     }

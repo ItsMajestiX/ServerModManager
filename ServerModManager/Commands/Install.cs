@@ -4,6 +4,8 @@ using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 
+using Pastel;
+
 using ServerModManager.PackageType;
 using ServerModManager.Util;
 using ServerModManager.Validation;
@@ -26,7 +28,7 @@ namespace ServerModManager.Commands
             {
                 if (PackageUtil.DoesPackageExist(overview.GetPackageWithName(i)))
                 {
-                    bool res = Dialog.YNDialog("WARNING: " + package.name + " is incompatiable with " + i + ". Would you like to remove the other package (Yes/No)? ");
+                    bool res = Dialog.YNDialog(("WARNING: " + package.name + " is incompatiable with " + i + ". Would you like to remove the other package (Yes/No)? ").Pastel("ffff00"));
                     if (res)
                     {
                         Validator newVal = ClassCopy.DeepCopy(val);
@@ -62,14 +64,14 @@ namespace ServerModManager.Commands
                             }
                             else
                             {
-                                Console.WriteLine("ERROR: The folder to install to does not exist. Did you unzip all the app files into a folder at the same level as sm_plugins?");
+                                Console.WriteLine("ERROR: The folder to install to does not exist. Did you unzip all the app files into a folder at the same level as sm_plugins?".Pastel("ff0000"));
                             }
                         }
                     }
                 }
                 else
                 {
-                    Console.WriteLine("WARNING: Plugin " + package.name + " is already installed, skipping.");
+                    Console.WriteLine(("WARNING: Plugin " + package.name + " is already installed, skipping.").Pastel("ffff000"));
                 }
             }
         }
@@ -87,7 +89,7 @@ namespace ServerModManager.Commands
                 }
                 else
                 {
-                    Console.WriteLine("ERROR: No package with name " + i);
+                    Console.WriteLine(("ERROR: No package with name " + i).Pastel("ff0000"));
                 }
             }
         }

@@ -2,6 +2,8 @@
 using System.IO;
 using System.Net;
 
+using Pastel;
+
 using ServerModManager.PackageType;
 using ServerModManager.Util;
 using ServerModManager.Validation;
@@ -38,7 +40,7 @@ namespace ServerModManager.Commands
                 }
                 else
                 {
-                    Console.WriteLine("WARNING: Package " + package.name + " is not installed. Skipping.");
+                    Console.WriteLine(("WARNING: Package " + package.name + " is not installed. Skipping.").Pastel("ffff00"));
                 }
             }
         }
@@ -67,7 +69,7 @@ namespace ServerModManager.Commands
                     }
                     else
                     {
-                        Console.WriteLine("WARNING: No package with name " + i + ".");
+                        Console.WriteLine(("WARNING: No package with name " + i + ".").Pastel("ffff00"));
                     }
                 }
             }

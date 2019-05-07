@@ -1,9 +1,10 @@
-﻿using Newtonsoft.Json;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
+
+using Pastel;
+using Newtonsoft.Json;
 
 using ServerModManager.Util;
 
@@ -71,7 +72,7 @@ namespace ServerModManager.PackageType
             {
                 if (e.InnerExceptions[0] is WebException)
                 {
-                    Console.WriteLine("ERROR: Error getting the packages from the server. Check your internet connection.");
+                    Console.WriteLine("ERROR: Error getting the packages from the server. Check your internet connection.".Pastel("ff0000"));
                     return false;
                 }
                 else

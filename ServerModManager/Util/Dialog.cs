@@ -1,5 +1,7 @@
 ﻿using System;
 
+using Pastel;
+
 namespace ServerModManager.Util
 {
     class Dialog
@@ -21,7 +23,7 @@ namespace ServerModManager.Util
                 }
                 else
                 {
-                    Console.WriteLine("Invalid response.");
+                    Console.WriteLine("Invalid response.".Pastel("ff0000"));
                 }
             }
         }

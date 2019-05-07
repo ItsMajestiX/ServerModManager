@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+using Pastel;
+
 //How we process flags. Might make this reusable in the future, but probably not.
 namespace ServerModManager.Validation
 {
@@ -23,7 +25,7 @@ namespace ServerModManager.Validation
                         //No duplicate flags
                         if (flags.Contains(i))
                         {
-                            Console.WriteLine("ERROR: Invalid flag.");
+                            Console.WriteLine("ERROR: Invalid flag.".Pastel("ff0000"));
                             invalid = true;
                         }
                         else
@@ -36,7 +38,7 @@ namespace ServerModManager.Validation
                                     forceUpdate = true;
                                     break;
                                 default:
-                                    Console.WriteLine("ERROR: Invalid flag.");
+                                    Console.WriteLine("ERROR: Invalid flag.".Pastel("ff0000"));
                                     invalid = true;
                                     break;
                             }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
 
+using Pastel;
+
 //Abandon hope to all ye who dare to enter.
 //Must have made this at the same time I made TmpDir.cs
 namespace ServerModManager.Validation
@@ -38,7 +40,7 @@ namespace ServerModManager.Validation
             int len = args.GetLength(0);
             if (len < 1)
             {
-                Console.WriteLine("ERROR: Usage scpman command");
+                Console.WriteLine("ERROR: Usage scpman command".Pastel("ff0000"));
                 opType = OP_TYPE.MAIN_HELP;
             }
             else
@@ -66,7 +68,7 @@ namespace ServerModManager.Validation
                         break;
                     //invalid command
                     default:
-                        Console.WriteLine("ERROR: Invalid command.");
+                        Console.WriteLine("ERROR: Invalid command.".Pastel("ff0000"));
                         opType = OP_TYPE.INVALID;
                         break;
                 }

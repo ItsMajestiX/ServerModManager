@@ -1,5 +1,7 @@
 ﻿using System;
 
+using Pastel;
+
 using ServerModManager.PackageType;
 using ServerModManager.Util;
 using ServerModManager.Validation;
@@ -52,7 +54,7 @@ namespace ServerModManager
                             Help.ServerHelp();
                             break;
                         default:
-                            Console.WriteLine("Unknown error");
+                            Console.WriteLine("Unknown error".Pastel("ff0000"));
                             break;
                     }
                 }
@@ -78,7 +80,7 @@ namespace ServerModManager
                         Help.ServerHelp();
                         break;
                     default:
-                        Console.WriteLine("Unknown error");
+                        Console.WriteLine("Unknown error".Pastel("ff0000"));
                         break;
                 }
             }

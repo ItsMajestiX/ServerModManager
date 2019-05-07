@@ -1,5 +1,6 @@
 ﻿using System;
 
+using Pastel;
 namespace ServerModManager.Validation
 {
     partial class Validator
@@ -10,7 +11,7 @@ namespace ServerModManager.Validation
             //Ensure we have arguments
             if (len < 2)
             {
-                Console.WriteLine("ERROR: Usage scpman remove packagename");
+                Console.WriteLine("ERROR: Usage scpman remove packagename".Pastel("ff0000"));
                 opType = OP_TYPE.REMOVE_HELP;
             }
             else
@@ -28,7 +29,7 @@ namespace ServerModManager.Validation
                         }
                         else
                         {
-                            Console.WriteLine("ERROR: Usage scpman update *");
+                            Console.WriteLine("ERROR: Usage scpman update *".Pastel("ff0000"));
                             opType = OP_TYPE.REMOVE_HELP;
                         }
                     }

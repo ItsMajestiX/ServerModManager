@@ -1,5 +1,7 @@
 ﻿using System;
 
+using Pastel;
+
 //This is a nightmare, but it somehow works.
 namespace ServerModManager.Validation
 {
@@ -18,7 +20,7 @@ namespace ServerModManager.Validation
             {
                 if (len < 2 + flag)
                 {
-                    Console.WriteLine("ERROR: Usage scpman update [-f] * \n scpman update [-f] package [package2, package3]");
+                    Console.WriteLine("ERROR: Usage scpman update [-f] * \n scpman update [-f] package [package2, package3]".Pastel("ff0000"));
                     opType = OP_TYPE.UPDATE_HELP;
                 }
                 else
@@ -35,7 +37,7 @@ namespace ServerModManager.Validation
                             }
                             else
                             {
-                                Console.WriteLine("ERROR: Usage scpman update *");
+                                Console.WriteLine("ERROR: Usage scpman update *".Pastel("ff0000"));
                                 opType = OP_TYPE.UPDATE_HELP;
                             }
                         }
