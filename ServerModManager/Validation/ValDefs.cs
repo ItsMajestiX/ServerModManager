@@ -17,7 +17,9 @@ namespace ServerModManager.Validation
             UPDATE = 3,
             UPDATE_HELP = -3,
             SERVER = 4,
-            SERVER_HELP = -4
+            SERVER_HELP = -4,
+            CREATEPACKAGE = 5,
+            CREATEPACKAGE_HELP = -5
         }
 
         //Define values that can be set by command

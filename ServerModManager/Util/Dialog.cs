@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 using Pastel;
 
 namespace ServerModManager.Util
@@ -26,6 +26,22 @@ namespace ServerModManager.Util
                     Console.WriteLine("Invalid response.".Pastel("ff0000"));
                 }
             }
+        }
+
+        public static string Prompt(string msg)
+        {
+            Console.Write(msg);
+            string answer = Console.ReadLine();
+            Console.WriteLine();
+            return answer;
+        }
+
+        public static List<string> MultiPrompt(string msg)
+        {
+            Console.Write(msg);
+            string answer = Console.ReadLine();
+            Console.WriteLine();
+            return new List<string>(answer.Split(" "));
         }
     }
 }
