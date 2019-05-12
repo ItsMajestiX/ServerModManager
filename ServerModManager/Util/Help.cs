@@ -11,7 +11,9 @@ namespace ServerModManager.Util
                 "scpman help: Displays this message.\n" +
                 "scpman install: Installs packages.\n" +
                 "scpman remove: Removes packages. \n" +
-                "scpman update: Updates packages.");
+                "scpman update: Updates packages. \n" +
+                "scpman server: Creates a new SCP:SL server.\n" +
+                "scpman createpackage: Get a package ready to be added.");
         }
 
         public static void InstallHelp()
@@ -42,6 +44,12 @@ namespace ServerModManager.Util
         {
             Console.WriteLine("USAGE: \n" +
                 "scpman server: Creates or updates a MultiAdmin + SMod2 server (windows only, sorry)");
+        }
+
+        public static void CreatePackageHelp()
+        {
+            Console.WriteLine("USAGE: \n" +
+                "scpman createpackage: Gets a package ready to be added to the list.");
         }
     }
 }

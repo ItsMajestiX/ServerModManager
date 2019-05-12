@@ -66,6 +66,9 @@ namespace ServerModManager.Validation
                     case "server":
                         ValServer(args, help, len);
                         break;
+                    case "createpackage":
+                        ValCreatePackage(args, help, len);
+                        break;
                     //invalid command
                     default:
                         Console.WriteLine("ERROR: Invalid command.".Pastel("ff0000"));

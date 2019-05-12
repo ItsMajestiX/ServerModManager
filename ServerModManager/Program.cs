@@ -53,6 +53,12 @@ namespace ServerModManager
                         case Validator.OP_TYPE.SERVER_HELP:
                             Help.ServerHelp();
                             break;
+                        case Validator.OP_TYPE.CREATEPACKAGE:
+                            Packager.PackagePlugin();
+                            break;
+                        case Validator.OP_TYPE.CREATEPACKAGE_HELP:
+                            Help.CreatePackageHelp();
+                            break;
                         default:
                             Console.WriteLine("Unknown error".Pastel("ff0000"));
                             break;
@@ -78,6 +84,9 @@ namespace ServerModManager
                         break;
                     case Validator.OP_TYPE.SERVER_HELP:
                         Help.ServerHelp();
+                        break;
+                    case Validator.OP_TYPE.CREATEPACKAGE_HELP:
+                        Help.CreatePackageHelp();
                         break;
                     default:
                         Console.WriteLine("Unknown error".Pastel("ff0000"));
