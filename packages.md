@@ -13,6 +13,7 @@
 <li><a href="https://github.com/PhoenProject/BetterAdmin/">betteradmin</a> by <a href="https://github.com/PhoenProject/">PhoenProject</a></li>
 <li><a href="https://github.com/Cyanox62/BetterDisarming/">betterdisarming</a> by <a href="https://github.com/Cyanox62/">Cyanox62</a></li>
 <li><a href="https://github.com/probe4aiur/Blackout/">blackout</a> by <a href="https://github.com/probe4aiur/">probe4aiur, Cyanox62</a></li>
+<li><a href="https://github.com/PatPeter/callvote">callvote</a> by <a href="https://github.com/PatPeter/">PatPater</a></li>
 <li><a href="https://github.com/Cyanox62/CustomAnnouncements/">customannouncements</a> by <a href="https://github.com/Cyanox62/">Cyanox62</a></li>
 <li>custombroadcasts by Laserman</li>
 <li><a href="https://github.com/Faeety/CustomDoorAccess/">customdooraccess</a> by <a href="https://github.com/Faeety/">Faeety</a></li>
