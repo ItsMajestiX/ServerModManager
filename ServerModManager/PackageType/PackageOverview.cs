@@ -25,27 +25,29 @@ namespace ServerModManager.PackageType
                 //Get repository from appropriate place
                 #if (DEBUG)
                     location = client.DownloadStringTaskAsync("http://127.0.0.1:8000/versions.json");
+                    await location;
                     Console.Write("\n\r");
                 #else
                     location = client.DownloadStringTaskAsync("https://raw.githubusercontent.com/ItsMajestiX/ServerModManager/master/versions.json");
+                    await location;
                     Console.Write("\n\r");
                 #endif
                 //Serialize to object
-                string locstr = await location;
-                Dictionary<string, string> locationDict = JsonConvert.DeserializeObject<Dictionary<string, string>>(locstr);
+                Dictionary<string, string> locationDict = JsonConvert.DeserializeObject<Dictionary<string, string>>(await location);
                 string fileLocation = locationDict[ver];
                 Task<string> json;
                 //Get repository from appropriate place
                 #if (DEBUG)
                     json = client.DownloadStringTaskAsync("http://127.0.0.1:8000/" + fileLocation);
+                    await json;
                     Console.Write("\n\r");
                 #else
                     json = client.DownloadStringTaskAsync("https://raw.githubusercontent.com/ItsMajestiX/ServerModManager/master/" + fileLocation);
+                    await json;
                     Console.Write("\n\r");
                 #endif
                 //Serialize to object
-                string data = await json;
-                packages = JsonConvert.DeserializeObject<PackageOverview>(data).packages;
+                packages = JsonConvert.DeserializeObject<PackageOverview>(await json).packages;
                 return true;
             }
         }
