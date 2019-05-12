@@ -16,15 +16,11 @@ namespace ServerModManager.Util
                 e.BytesReceived,
                 e.TotalBytesToReceive,
                 e.ProgressPercentage).Pastel("00ff00"));
-            if (e.ProgressPercentage == 100)
-            {
-                Console.Write("\n");
-            }
         }
         //Buggy at the moment, sometimes is run before the loading bar. Well, I guess the other one is no better, but we need that.
-        //public void DownloadFinishedCallback(object sender, DownloadStringCompletedEventArgs e)
-        //{
-        //    Console.WriteLine("Done.");
-        //}
+        public void DownloadFinishedCallback(object sender, DownloadStringCompletedEventArgs e)
+        {
+            Console.WriteLine("\n\rDone.");
+        }
     }
 }

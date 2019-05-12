@@ -50,10 +50,11 @@ namespace ServerModManager.Commands
                     {
                         //Setup loading bar
                         client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(LoadingBar.DownloadProgressCallback);
-                        //Download file to directory after checking if the folders exist
+                        //Download file to directory after checking if the folders existba
                         if (PackageUtil.DoesDirectoryExist(package))
                         {
                             await client.DownloadFileTaskAsync(package.downloadLink, "../sm_plugins/" + package.downloadLocation);
+                            Console.Write("\n\r");
                         }
                         else
                         {
@@ -61,6 +62,7 @@ namespace ServerModManager.Commands
                             {
                                 Directory.CreateDirectory(Path.GetDirectoryName("../sm_plugins/" + package.downloadLocation));
                                 await client.DownloadFileTaskAsync(package.downloadLink, "../sm_plugins/" + package.downloadLocation);
+                                Console.Write("\n\r");
                             }
                             else
                             {

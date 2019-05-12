@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Net;
+using System.Threading.Tasks;
 
 using Pastel;
 
@@ -12,7 +13,7 @@ namespace ServerModManager.Commands
 {
     class Updater
     {
-        public static void Update(Package package, Validator val, PackageOverview overview)
+        public async static Task Update(Package package, Validator val, PackageOverview overview)
         {
             //Create tmp dir so files are gone after execution.
             using (TmpDir dir = new TmpDir("."))
@@ -26,7 +27,8 @@ namespace ServerModManager.Commands
                     //Setup loading bar
                     client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(LoadingBar.DownloadProgressCallback);
                     //Get latest version
-                    client.DownloadFileTaskAsync(package.downloadLink, dir.dirName + filename).Wait();
+                    await client.DownloadFileTaskAsync(package.downloadLink, dir.dirName + filename);
+                    Console.Write("\n\r");
                     //Compare. The && ! will make it so that it will always go to 2nd case if val.forceUpdate is ture.
                     if (FileCompare.CompareFiles(dir.dirName + filename, "../sm_plugins/" + package.downloadLocation) && !val.forceUpdate)
                     {
@@ -54,7 +56,7 @@ namespace ServerModManager.Commands
                 {
                     if (PackageUtil.DoesPackageExist(i))
                     {
-                        Update(i, val, overview);
+                        Update(i, val, overview).Wait();
                     }
                 }
             }
@@ -65,7 +67,7 @@ namespace ServerModManager.Commands
                 {
                     if (overview.GetPackageWithName(i) != null)
                     {
-                        Update(overview.GetPackageWithName(i), val, overview);
+                        Update(overview.GetPackageWithName(i), val, overview).Wait();
                     }
                     else
                     {

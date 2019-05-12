@@ -19,7 +19,7 @@ namespace ServerModManager.Commands
             List<string> incompatibilities = Dialog.MultiPrompt("Enter package incompatibilities, seperated by spaces: ");
             string downloadLink = Dialog.Prompt("Enter download link of package DLL: ");
             string downloadLocation = Dialog.Prompt("Enter download location, relative to sm_plugins/: ");
-            Console.WriteLine(JsonConvert.SerializeObject(new Package(name, author, version, dependencies, incompatibilities, downloadLink, downloadLocation));
+            Console.WriteLine(JsonConvert.SerializeObject(new Package(name, author, version, dependencies, incompatibilities, downloadLink, downloadLocation)));
             Console.WriteLine("Send the text above to me at MajestiX#7652 on discord and I'll get it added!");
         }
     }

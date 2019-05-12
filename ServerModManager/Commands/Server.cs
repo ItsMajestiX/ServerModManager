@@ -33,6 +33,7 @@ namespace ServerModManager.Commands
                     {
                         client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(LoadingBar.DownloadProgressCallback);
                         await client.DownloadFileTaskAsync("https://steamcdn-a.akamaihd.net/client/installer/steamcmd.zip", dir.dirName + "steamcmd.zip");
+                        Console.Write("\n\r");
                     }
                     ZipFile.ExtractToDirectory(dir.dirName + "steamcmd.zip", "../steamcmd/");
                 }

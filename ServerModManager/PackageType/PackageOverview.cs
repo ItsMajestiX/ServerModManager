@@ -25,8 +25,10 @@ namespace ServerModManager.PackageType
                 //Get repository from appropriate place
                 #if (DEBUG)
                     location = client.DownloadStringTaskAsync("http://127.0.0.1:8000/versions.json");
+                    Console.Write("\n\r");
                 #else
                     location = client.DownloadStringTaskAsync("https://raw.githubusercontent.com/ItsMajestiX/ServerModManager/master/versions.json");
+                    Console.Write("\n\r");
                 #endif
                 //Serialize to object
                 string locstr = await location;
@@ -36,8 +38,10 @@ namespace ServerModManager.PackageType
                 //Get repository from appropriate place
                 #if (DEBUG)
                     json = client.DownloadStringTaskAsync("http://127.0.0.1:8000/" + fileLocation);
+                    Console.Write("\n\r");
                 #else
                     json = client.DownloadStringTaskAsync("https://raw.githubusercontent.com/ItsMajestiX/ServerModManager/master/" + fileLocation);
+                    Console.Write("\n\r");
                 #endif
                 //Serialize to object
                 string data = await json;
