@@ -33,8 +33,9 @@
 <h1 id="for-modders">For Modders</h1>
 <p>Get your mod added to the list! DM me on discord at MajestiX#7652.</p>
 <h1 id="credits">Credits</h1>
+<p><a href="https://github.com/JamesNK/Newtonsoft.Json">Newtonsoft.JSON (JSON processing)</a></p>
+<p><a href="https://github.com/silkfire/Pastel">Pastel (colored command line text)</a></p>
 <p>Special thanks to <a href="https://github.com/VirtualBrightPlayz">VirtualBrightPlayz</a> for making the packing I tested on in the begining: <a href="https://github.com/VirtualBrightPlayz/Smod2-Mod1_DCLASS_MADNESS">dclassmadneess</a></p>
 <blockquote>
 <p>Written with <a href="https://stackedit.io/">StackEdit</a>.</p>
 </blockquote>
-
